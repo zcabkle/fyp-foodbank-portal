@@ -1,8 +1,14 @@
-import React from 'react';
+import { ThemeProvider } from '@mui/material/styles';
+import React from "react"
+import ApplicationRouter from "./routing/ApplicationRouter";
+import createTheme from "./theme/index.js";
+import { CssBaseline } from '@mui/material';
 
-function App() {
-  const value = 'World';
-  return <div>Hello {value} Here</div>;
-}
+export default function App() {
 
-export default App;
+  return (
+   //<div><ThemeProvider theme={createTheme()}> <CssBaseline /><ApplicationRouter /><AppBar/></ThemeProvider></div>
+    <div><ThemeProvider theme={createTheme()}> <CssBaseline /><ApplicationRouter /></ThemeProvider></div>
+
+  );
+} 

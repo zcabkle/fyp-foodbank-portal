@@ -1,0 +1,21 @@
+.active-link {
+  background-color: #1c1952;
+  color: white;
+  text-decoration: none;
+}
+
+.active-menu {
+  background-color: #5048e573;
+  color: black;
+  text-decoration: none;
+}
+
+.link-item {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-item {
+  color: black;
+  text-decoration: none;
+}

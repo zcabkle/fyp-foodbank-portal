@@ -1,7 +1,7 @@
 import {
   Box, Container, Grid, Typography, Card, CircularProgress,
 } from '@mui/material';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import ItemListTable from '../../components/Items/item-list-table';
 import { ListFilters } from '../../components/Items/item-list-filters';
 import { useEffect } from 'react';

@@ -1,5 +1,5 @@
 import React from "react";
-import LandingPage from "../pages/landing-page";
+import LandingPage from "../pages/landing-page/landing-page";
 import ItemsPage from "../pages/items-page/items-page.js";
 import FoodbanksPage from "../pages/foodbanks-page/foodbanks-page";
 import FoodbankItemsPage from "../pages/foodbank-items-page/foodbank-items-page";
@@ -11,7 +11,7 @@ import { Footer } from "../components/Footer/Footer";
 function ApplicationRouter() {
     return (
         <>
-            <Router>
+            <Router basename="/">
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<LandingPage />} />

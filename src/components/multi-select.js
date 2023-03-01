@@ -1,4 +1,6 @@
-import { useRef, useState } from 'react';
+/* eslint-disable no-unused-expressions */
+
+import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Button, Checkbox, FormControlLabel, Menu, MenuItem } from '@mui/material';
 import { ChevronDown as ChevronDownIcon } from '../icons/chevron-down';

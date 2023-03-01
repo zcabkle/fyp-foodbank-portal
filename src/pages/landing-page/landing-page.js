@@ -3,7 +3,7 @@ import Carousel from 'react-material-ui-carousel';
 import * as AiIcons from 'react-icons/ai';
 import * as FaIcons from 'react-icons/fa';
 import { useState, useEffect } from 'react';
-import { ArrowRight as ArrowRightIcon } from '../icons/arrow-right';
+import { ArrowRight as ArrowRightIcon } from '../../icons/arrow-right';
 import * as MdIcons from "react-icons/md";
 
 window.user_type = "";

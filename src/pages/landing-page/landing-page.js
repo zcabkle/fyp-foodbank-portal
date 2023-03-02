@@ -6,8 +6,6 @@ import { useState, useEffect } from 'react';
 import { ArrowRight as ArrowRightIcon } from '../../icons/arrow-right';
 import * as MdIcons from "react-icons/md";
 
-window.user_type = "";
-
 function Item(props) {
   return (
     <Paper style={{ zIndex: '-3', textAlign: 'center', alignContent: 'center' }}>
@@ -26,13 +24,18 @@ const LandingPage = () => {
   const [itemCount, setItemCount] = useState(0);
   const [foodbanksCount, setFoodbanksCount] = useState(0);
   const [visitsCount, setVisitsCount] = useState(0);
-  const [rerendered, setRerendered] = useState(false)
+  const [loadedSS, setLoadedSS] = useState(false)
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  if (sessionStorage.getItem("userType") && !rerendered) {
+
+  if(!sessionStorage.getItem("userType")){
+    window.sessionStorage.setItem("userType", "")
+  }
+
+  if (sessionStorage.getItem("userType") !== '' && !loadedSS) {
     setUserType(sessionStorage.getItem("userType"));
-    setRerendered(true);
+    setLoadedSS(true);
   }
 
   useEffect(() => {

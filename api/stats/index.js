@@ -1,5 +1,3 @@
-import cors from "cors";
-import express from "express";
 import getToken from "../auth.js";
 import makeRequest from "../makeRequest.js";
 

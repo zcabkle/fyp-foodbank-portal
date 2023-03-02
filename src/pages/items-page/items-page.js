@@ -24,7 +24,7 @@ const ItemsPage = () => {
 
   useEffect(() => {
     try {
-      fetch("http://localhost:8080/items")
+      fetch("/api/items")
         .then(res => res.json())
         .then(
           res => {

@@ -21,7 +21,7 @@ const FoodbankParcelsPage = () => {
 
   useEffect(() => {
     try {
-      fetch("http://localhost:8080/parcels/".concat(guid))
+      fetch("/api/parcelsid/".concat(guid))
         .then(res => res.json())
         .then(res => {
           setParcels(res.parcels.value)

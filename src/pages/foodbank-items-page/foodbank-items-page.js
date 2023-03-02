@@ -22,7 +22,7 @@ const FoodbankItemsPage = () => {
 
   useEffect(() => {
     try {
-      fetch("http://localhost:8080/items/".concat(guid))
+      fetch("/api/itemsid/".concat(guid))
         .then(res => res.json())
         .then(res => {
           setItems(res.items.value);

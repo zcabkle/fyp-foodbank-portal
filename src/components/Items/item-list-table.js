@@ -237,7 +237,7 @@ const ItemListTable = (props) => {
                               color="textSecondary"
                               variant="body2"
                             >
-                              {item.cr967_stocklevel === 0 && sessionStorage.getItem("userType") == 'donator' && "Donations requested!"}
+                              {item.cr967_stocklevel === 0 && (sessionStorage.getItem("userType") == 'donator' || sessionStorage.getItem("userType") == '')&& "Donations requested!"}
                             </Typography></Box>}
                         {
                           item.cr967_sharestocklevelwith !== 2 && <Typography

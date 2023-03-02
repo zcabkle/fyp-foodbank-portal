@@ -38,6 +38,8 @@ const FoodbankListTable = (props) => {
     setOpenProduct((prevValue) => (prevValue === productId ? null : productId));
   };
 
+  console.log(sessionStorage.getItem("userType"));
+
   return (
     <Card>
       <div>
@@ -224,7 +226,7 @@ const FoodbankListTable = (props) => {
                                   <Link href={"/items/" + foodbank.cr967_foodbankid}> View the items at {foodbank.cr967_name} </Link>
                                   <br></br>
 
-                                  {sessionStorage.getItem("userType") == 'user' && <Link href={"/parcels/" + foodbank.cr967_foodbankid}> View the parcels at  {foodbank.cr967_name} </Link>}
+                                  { (sessionStorage.getItem("userType") == 'user' || sessionStorage.getItem("userType") == '') && <Link href={"/parcels/" + foodbank.cr967_foodbankid}> View the parcels at  {foodbank.cr967_name} </Link>}
                                 </Typography>
                                 <Divider sx={{ my: 2 }} />
                                 <Grid

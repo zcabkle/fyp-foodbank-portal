@@ -35,11 +35,16 @@ const LandingPage = () => {
     setRerendered(true);
   }
 
+  console.log("here")
+
   useEffect(() => {
     try {
-      fetch("http://localhost:8080/stats")
-        .then(res => res.json())
+      fetch("/api/stats")
         .then(res => {
+          return res.json()
+        })
+        .then(res => {
+          console.log("RES AFTER TEXT", res)
           setItemCount(res.items_count)
           setFoodbanksCount(res.foodbanks_count)
           setVisitsCount(res.visits_count)

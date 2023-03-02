@@ -31,7 +31,7 @@ const FoodbanksPage = () => {
 
   useEffect(() => {
     try {
-      fetch("http://localhost:8080/foodbanks")
+      fetch("/api/foodbanks")
         .then(res => res.json())
         .then(res => {
           setFoodbanks(res.foodbanks.value);

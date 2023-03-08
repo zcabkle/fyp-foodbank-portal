@@ -10,7 +10,7 @@ function Item(props) {
   return (
     <Paper style={{ zIndex: '-3', textAlign: 'center', alignContent: 'center' }}>
       <img width="auto" height="500vh" src={props.item.src} />
-      <Typography variant="h6">
+      <Typography variant="body2">
         {props.item.description}
       </Typography>
       <br></br>
@@ -29,7 +29,7 @@ const LandingPage = () => {
   const [error, setError] = useState('');
 
 
-  if(!sessionStorage.getItem("userType")){
+  if (!sessionStorage.getItem("userType")) {
     window.sessionStorage.setItem("userType", "")
   }
 
@@ -124,316 +124,323 @@ const LandingPage = () => {
   ]
 
   return (
-    <Box
-      component="main"
-      sx={{
-        flexGrow: 1,
-        py: 8
-      }}
+    <Grid
+      container
+      spacing={3}
     >
-      <Container maxWidth="xl">
-
-        <Grid
-          container
-          justifyContent="space-between"
+      <Grid item md={1}></Grid>
+      <Grid item md={10}
+        xs={12}>
+        <Box
+          component="main"
+          sx={{
+            flexGrow: 1,
+            py: 8
+          }}
         >
-          <Grid
-            item
-            xs={12}
-          >
-            <Card>
-              <CardContent>
-                <Box
-                  sx={{
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    display: 'flex'
-                  }}
-                >
-                  <Typography
-                    color="primary.main"
-                    sx={{ pl: 1 }}
-                    variant="h6"
-                  >
-                    <FaIcons.FaRocket
-                      color="primary"
-                      size={20}
-                    />
-                    &nbsp;
-                    Our Mission Statement
-                  </Typography>
-                </Box>
-                <Typography
-                  variant="h6"
-                  align="center"
-                  sx={{ mt: 2, align: 'center' }}
-                >
-                  With great pride, we announce that our nationwide network of foodbanks, bringing hope and sustenance to those in need. <br />
-                  Join us in our mission to combat hunger and make a real difference in the lives of individuals and families across the country. Together, we can create a world where no one goes hungry.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
-        <br />
+          <Container maxWidth="xl">
 
-        <Carousel
-          NextIcon={<AiIcons.AiFillCaretRight />}
-          PrevIcon={<AiIcons.AiFillCaretLeft />}
-          autoPlay={true}
-          interval={5000}
-          animation={"slide"}
-          navButtonsAlwaysVisible={true}
-          style={{ height: "100%", width: '100%', zIndex: '-3' }}
-        >
-          {
-            items.map((item, i) => <Item key={i} item={item} />)
-          }
-        </Carousel>
-        <br></br>
-        <ChoosePersona />
-        <br></br>
-        <Grid
-          container
-          justifyContent="space-between"
-          spacing={3}
-        >
-          <Grid
-            item
-            md={4}
-            xs={12}
-          >
-            <Card>
-              <CardContent>
-                <Box
-                  sx={{
-                    alignItems: 'center',
-                    display: 'flex'
-                  }}
-                >
-                  <Typography
-                    color="primary.main"
-                    sx={{ pl: 1 }}
-                    variant="h6"
-                  >
-                    <AiIcons.AiFillShop
-                      color="primary"
-                      fontSize="medium"
-                    />
-                    &nbsp;
-                    Registered Branches
-                  </Typography>
-                </Box>
-                <Typography
-                  variant="h6"
-                  sx={{ mt: 2 }}
-                >
+            <Grid
+              container
+              justifyContent="space-between"
+            >
+              <Grid
+                item
+                xs={12}
+              >
+                <Card>
+                  <CardContent>
+                    <Box
+                      sx={{
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        display: 'flex'
+                      }}
+                    >
+                      <Typography
+                        color="primary.main"
+                        sx={{ pl: 1 }}
+                        variant="h6"
+                      >
+                      
+                        &nbsp;
+                        Our Mission Statement
+                      </Typography>
+                    </Box>
+                    <Typography
+                      variant="body1"
+                      align="center"
+                      sx={{ mt: 2, align: 'center' }}
+                    >
+                      With great pride, we announce that our nationwide network of foodbanks, bringing hope and sustenance to those in need. <br />
+                      Join us in our mission to combat hunger and make a real difference in the lives of individuals and families across the country. Together, we can create a world where no one goes hungry.
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            </Grid>
+            <br />
 
-                  We are excited to announce that {foodbanksCount} branches are registered to our foodbank network! This is a great milestone in our efforts to combat food insecurity and provide easier access to those in need.
-                </Typography>
-              </CardContent>
-              <Divider />
-              <CardActions>
-                <Button
-                  endIcon={<ArrowRightIcon fontSize="small" />}
-                  size="small"
-                >
-                  <Link href="/foodbanks" underline="none">
-                    Browse Foodbanks
-                  </Link>
-                </Button>
-              </CardActions>
-            </Card>
-          </Grid>
-          <Grid
-            item
-            md={4}
-            xs={12}
-          >
-            <Card>
-              <CardContent>
-                <Box
-                  sx={{
-                    alignItems: 'center',
-                    display: 'flex'
-                  }}
-                >
+            <Carousel
+              NextIcon={<AiIcons.AiFillCaretRight />}
+              PrevIcon={<AiIcons.AiFillCaretLeft />}
+              autoPlay={true}
+              interval={5000}
+              animation={"slide"}
+              navButtonsAlwaysVisible={true}
+              style={{ height: "100%", width: '100%', zIndex: '-3' }}
+            >
+              {
+                items.map((item, i) => <Item key={i} item={item} />)
+              }
+            </Carousel>
+            <br></br>
+            <ChoosePersona />
+            <br></br>
+            <Grid
+              container
+              justifyContent="space-between"
+              spacing={3}
+            >
+              <Grid
+                item
+                md={4}
+                xs={12}
+              >
+                <Card>
+                  <CardContent>
+                    <Box
+                      sx={{
+                        alignItems: 'center',
+                        display: 'flex'
+                      }}
+                    >
+                      <Typography
+                        color="primary.main"
+                        sx={{ pl: 1 }}
+                        variant="h6"
+                      >
+                        <AiIcons.AiFillShop
+                          color="primary"
+                          fontSize="medium"
+                        />
+                        &nbsp;
+                        Registered Branches
+                      </Typography>
+                    </Box>
+                    <Typography
+                      variant="body1"
+                      sx={{ mt: 2 }}
+                    >
 
-                  <Typography
-                    color="primary.main"
-                    sx={{ pl: 1 }}
-                    variant="h6"
-                  >
-                    <AiIcons.AiOutlineStock
-                      color="primary"
-                      fontSize="large"
-                    />
-                    &nbsp;
-                    Recorded Visits
-                  </Typography>
-                </Box>
-                <Typography
-                  variant="h6"
-                  sx={{ mt: 2 }}
-                >
-                  Our nationwide network has proudly recorded {visitsCount} visits, providing unparalleled access to our foodbanks. Join us and experience the difference today!
-                </Typography>
-              </CardContent>
-              <Divider />
-              <CardActions>
-                <Button
-                  endIcon={<ArrowRightIcon fontSize="small" />}
-                  size="small"
-                >
-                  <Link href="/foodbanks" underline="none">
-                    Dicover Foodbanks
-                  </Link>
+                      We are excited to announce that {foodbanksCount} branches are registered to our foodbank network! This is a great milestone in our efforts to combat food insecurity and provide easier access to those in need.
+                    </Typography>
+                  </CardContent>
+                  <Divider />
+                  <CardActions>
+                    <Button
+                      endIcon={<ArrowRightIcon fontSize="small" />}
+                      size="small"
+                    >
+                      <Link href="/foodbanks" underline="none">
+                        Browse Foodbanks
+                      </Link>
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid
+                item
+                md={4}
+                xs={12}
+              >
+                <Card>
+                  <CardContent>
+                    <Box
+                      sx={{
+                        alignItems: 'center',
+                        display: 'flex'
+                      }}
+                    >
 
-                </Button>
-              </CardActions>
-            </Card>
-          </Grid>
+                      <Typography
+                        color="primary.main"
+                        sx={{ pl: 1 }}
+                        variant="h6"
+                      >
+                        <AiIcons.AiOutlineStock
+                          color="primary"
+                          fontSize="large"
+                        />
+                        &nbsp;
+                        Recorded Visits
+                      </Typography>
+                    </Box>
+                    <Typography
+                      variant="body1"
+                      sx={{ mt: 2 }}
+                    >
+                      Our nationwide network has proudly recorded {visitsCount} visits, providing unparalleled access to our foodbanks. Join us and experience the difference today!
+                    </Typography>
+                  </CardContent>
+                  <Divider />
+                  <CardActions>
+                    <Button
+                      endIcon={<ArrowRightIcon fontSize="small" />}
+                      size="small"
+                    >
+                      <Link href="/foodbanks" underline="none">
+                        Dicover Foodbanks
+                      </Link>
 
-          <Grid
-            item
-            md={4}
-            xs={12}
-          >
-            <Card>
-              <CardContent>
-                <Box
-                  sx={{
-                    alignItems: 'center',
-                    display: 'flex'
-                  }}
-                >
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
 
-                  <Typography
-                    color="primary.main"
-                    sx={{ pl: 1 }}
-                    variant="h6"
-                  >
-                    <MdIcons.MdFoodBank
-                      color="primary"
-                      fontSize="large"
-                    />
-                    &nbsp;
-                    Number of Items
-                  </Typography>
-                </Box>
-                <Typography
-                  variant="h6"
-                  sx={{ mt: 2 }}
-                >
-                  We are pleased to announce that our foodbank network now offers a total of {itemCount} different items to help combat hunger and provide much-needed sustenance to those in need.
-                </Typography>
-              </CardContent>
-              <Divider />
-              <CardActions>
-                <Button
-                  endIcon={<ArrowRightIcon fontSize="small" />}
-                  size="small"
-                >
-                  <Link href="/items" underline="none">
-                    Browse Items
-                  </Link>
-                </Button>
-              </CardActions>
-            </Card>
-          </Grid>
-          <Grid
-            item
-            md={6}
-            xs={12}
-          >
-            <Card>
-              <CardContent>
-                <Box
-                  sx={{
-                    alignItems: 'center',
-                    display: 'flex'
-                  }}
-                >
-                  <Typography
-                    color="primary.main"
-                    sx={{ pl: 1 }}
-                    variant="h6"
-                  >
-                    <FaIcons.FaQuestionCircle />
-                  </Typography>
-                  <Typography
-                    color="primary.main"
-                    sx={{ pl: 1 }}
-                    variant="h6"
-                  >
-                    What is this project?
-                  </Typography>
-                </Box>
-                <br></br>
-                <Typography
-                  color="textSecondary"
-                  variant="body1"
-                >
+              <Grid
+                item
+                md={4}
+                xs={12}
+              >
+                <Card>
+                  <CardContent>
+                    <Box
+                      sx={{
+                        alignItems: 'center',
+                        display: 'flex'
+                      }}
+                    >
 
-                  We are proud to introduce our latest project, which aims to reduce food wastage by providing more powerful insights to foodbank workers, users, and donators.
-                  By doing so, we hope to drive more useful donations across the UK and better serve our community in the fight against hunger. Our system is completely synced with the foodbanks' own systems,
-                  providing an up-to-date snapshot of the situation at each foodbank. This allows you to make the most effective use of donations and ensure that they reach those who need them most.
-                  <br /><br/>
-                  We encourage everyone to take advantage of the variety of items available through our network and to spread the word about the resources we offer.
-                  With your help, we can make a real difference in the fight against food insecurity and create a more sustainable future for all. Thank you for your support.
+                      <Typography
+                        color="primary.main"
+                        sx={{ pl: 1 }}
+                        variant="h6"
+                      >
+                        <MdIcons.MdFoodBank
+                          color="primary"
+                          fontSize="large"
+                        />
+                        &nbsp;
+                        Number of Items
+                      </Typography>
+                    </Box>
+                    <Typography
+                      variant="body1"
+                      sx={{ mt: 2 }}
+                    >
+                      We are pleased to announce that our foodbank network now offers a total of {itemCount} different items to help combat hunger and provide much-needed sustenance to those in need.
+                    </Typography>
+                  </CardContent>
+                  <Divider />
+                  <CardActions>
+                    <Button
+                      endIcon={<ArrowRightIcon fontSize="small" />}
+                      size="small"
+                    >
+                      <Link href="/items" underline="none">
+                        Browse Items
+                      </Link>
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid
+                item
+                md={6}
+                xs={12}
+              >
+                <Card>
+                  <CardContent>
+                    <Box
+                      sx={{
+                        alignItems: 'center',
+                        display: 'flex'
+                      }}
+                    >
+                      <Typography
+                        color="primary.main"
+                        sx={{ pl: 1 }}
+                        variant="h6"
+                      >
+                        <FaIcons.FaQuestionCircle />
+                      </Typography>
+                      <Typography
+                        color="primary.main"
+                        sx={{ pl: 1 }}
+                        variant="h6"
+                      >
+                        What is this project?
+                      </Typography>
+                    </Box>
+                    <br></br>
+                    <Typography
+                      color="textSecondary"
+                      variant="body1"
+                    >
 
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
+                      We are proud to introduce our latest project, which aims to reduce food wastage by providing more powerful insights to foodbank workers, users, and donators.
+                      By doing so, we hope to drive more useful donations across the UK and better serve our community in the fight against hunger. Our system is completely synced with the foodbanks' own systems,
+                      providing an up-to-date snapshot of the situation at each foodbank. This allows you to make the most effective use of donations and ensure that they reach those who need them most.
+                      <br /><br />
+                      We encourage everyone to take advantage of the variety of items available through our network and to spread the word about the resources we offer.
+                      With your help, we can make a real difference in the fight against food insecurity and create a more sustainable future for all. Thank you for your support.
 
-          <Grid
-            item
-            md={6}
-            xs={12}
-          >
-            <Card>
-              <CardContent>
-                <Box
-                  sx={{
-                    alignItems: 'center',
-                    display: 'flex'
-                  }}
-                >
-                  <Typography
-                    color="primary.main"
-                    sx={{ pl: 1 }}
-                    variant="h6"
-                  >
-                    <FaIcons.FaQuestionCircle />
-                  </Typography>
-                  <Typography
-                    color="primary.main"
-                    sx={{ pl: 1 }}
-                    variant="h6"
-                  >
-                    Who does this website serve?
-                  </Typography>
-                </Box>
-                <br></br>
-                <Typography
-                  color="textSecondary"
-                  variant="body1"
-                >
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
 
-                  <li>For donators, our website provides an easy and convenient way to donate find where to donate the essential items that are currently needed by their local community.
-                    This helps both large and small donators to make a larger impact and support those who are struggling with hunger.</li>
-                  <li>For foodbank users, our website offers the ability to browse stock before visiting a foodbank, enabling them to visit the foodbanks that best cater to their specific needs.
-                    By utilizing our website, foodbank users can access the resources they need to help them and their families thrive.</li>
-                  <br />We are committed to serving both donators and foodbank users alike, and we encourage everyone to explore our website
-                  and join us in our mission to create a world where no one goes hungry. Thank you for your support.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
+              <Grid
+                item
+                md={6}
+                xs={12}
+              >
+                <Card>
+                  <CardContent>
+                    <Box
+                      sx={{
+                        alignItems: 'center',
+                        display: 'flex'
+                      }}
+                    >
+                      <Typography
+                        color="primary.main"
+                        sx={{ pl: 1 }}
+                        variant="h6"
+                      >
+                        <FaIcons.FaQuestionCircle />
+                      </Typography>
+                      <Typography
+                        color="primary.main"
+                        sx={{ pl: 1 }}
+                        variant="h6"
+                      >
+                        Who does this website serve?
+                      </Typography>
+                    </Box>
+                    <br></br>
+                    <Typography
+                      color="textSecondary"
+                      variant="body1"
+                    >
+
+                      <li>For donators, our website provides an easy and convenient way to donate find where to donate the essential items that are currently needed by their local community.
+                        This helps both large and small donators to make a larger impact and support those who are struggling with hunger.</li>
+                      <li>For foodbank users, our website offers the ability to browse stock before visiting a foodbank, enabling them to visit the foodbanks that best cater to their specific needs.
+                        By utilizing our website, foodbank users can access the resources they need to help them and their families thrive.</li>
+                      <br />We are committed to serving both donators and foodbank users alike, and we encourage everyone to explore our website
+                      and join us in our mission to create a world where no one goes hungry. Thank you for your support.
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            </Grid>
+          </Container>
+        </Box>
+      </Grid>
+      <Grid item md={1}></Grid>
+    </Grid>
   )
 }
 

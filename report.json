@@ -1,0 +1,102 @@
+{
+  "config": {
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 1,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/kamilebanks/Desktop/Azure Static Web Pages/fyp-client/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "name": "",
+        "testDir": "/Users/kamilebanks/Desktop/Azure Static Web Pages/fyp-client",
+        "testIgnore": [],
+        "testMatch": [
+          "**/?(*.)@(spec|test).*"
+        ],
+        "timeout": 0
+      }
+    ],
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "pw-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFolder": "pw-report",
+          "outputFile": "report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "configFile": "/Users/kamilebanks/Desktop/Azure Static Web Pages/fyp-client/playwright.config.ts",
+    "rootDir": "/Users/kamilebanks/Desktop/Azure Static Web Pages/fyp-client",
+    "quiet": false,
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.31.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run start",
+      "port": 3000,
+      "timeout": 120000,
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "tests/playwright.spec.ts",
+      "file": "tests/playwright.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "mytest",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-07T17:03:09.953Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "fc13e2e9cb8c2addff36-f797f18ed0e940a543fb",
+          "file": "tests/playwright.spec.ts",
+          "line": 8,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

@@ -38,8 +38,6 @@ const FoodbankListTable = (props) => {
     setOpenProduct((prevValue) => (prevValue === productId ? null : productId));
   };
 
-  console.log(sessionStorage.getItem("userType"));
-
   return (
     <Card>
       <div>

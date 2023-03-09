@@ -5,6 +5,8 @@ import { useEffect, useRef } from 'react';
  * @param {Function} effect
  * @param {Array<any>} dependencies
  */
+
+// Update function used on the filters for the tables.
 export const useUpdateEffect = (effect, dependencies = []) => {
   const isInitialMount = useRef(true);
 

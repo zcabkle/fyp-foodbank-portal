@@ -7,6 +7,11 @@ import { CssBaseline } from '@mui/material';
 export default function App() {
 
   return (
-    <div><ThemeProvider theme={createTheme()}> <CssBaseline /><ApplicationRouter /></ThemeProvider></div>
+    <div>
+      <ThemeProvider theme={createTheme()}>
+        <CssBaseline />
+        <ApplicationRouter />
+      </ThemeProvider>
+    </div>
   );
 } 

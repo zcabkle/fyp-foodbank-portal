@@ -65,5 +65,11 @@
   "devDependencies": {
     "@playwright/test": "^1.22.2",
     "@testing-library/react": "^14.0.0"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/theme/",
+      "<rootDir>/src/icons/"
+    ]
   }
 }

@@ -1,4 +1,4 @@
-import { render, screen, getByText } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import Navbar from "../components/Navbar/Navbar"
 import { MultiSelect } from '../components/multi-select';
 import { Scrollbar } from '../components/scrollbar';
@@ -45,11 +45,28 @@ test('renders the footer', async () => {
   const result = render(< Footer />);
 });
 
-test('renders the navbar', async () => {
+test('render the navbar for desktop', async () => {
   const result = render(
     <Router>
       < Navbar />
     </Router>);
+});
+
+test('render the navbar for mobile and open it', async () => {
+  // Change the viewport to 500px.
+  global.innerWidth = 500;
+
+  // Trigger the window resize event.
+  global.dispatchEvent(new Event('resize'));
+
+  const result = render(
+    <Router>
+      < Navbar />
+    </Router>);
+
+  var button = screen.getAllByRole('button')[0]
+  fireEvent.click(button)
+  
 });
 
 test('renders the severity pill', async () => {
@@ -64,13 +81,21 @@ test('renders the router', async () => {
   const result = render(< ApplicationRouter />);
 });
 
-test('renders the multiselect', async () => {
-  const result = render(
+test('render the multiselect and open it and select a new value', async () => {
+  var result = render(
     < MultiSelect
       label="null"
       onChange={() => void 0}
-      options={[]}
-      value={[]} />);
+      options={[{label: "All", value: "all"}, {value: "NW1", label: "NW1"}, {value: "WC1H", label: "WC1H"}]}
+      value={['all']} />);
+
+  var button = screen.getByRole('button')
+  fireEvent.click(button)
+
+  var new_checkbox = screen.getAllByRole('menuitem')[1].querySelector('input')
+
+  fireEvent.click(new_checkbox)
+
 });
 
 test('renders the foodbank list table', async () => {

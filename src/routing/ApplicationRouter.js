@@ -6,7 +6,7 @@ import FoodbankItemsPage from "../pages/foodbank-items-page/foodbank-items-page"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import FoodbankParcelsPage from "../pages/foodbank-parcels-page/foodbank-parcels-page";
 import Navbar from "../components/Navbar/Navbar";
-import { Footer } from "../components/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 
 function ApplicationRouter() {
     return (

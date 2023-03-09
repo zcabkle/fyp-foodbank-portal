@@ -1,7 +1,7 @@
 .active-link {
-  background-color: #1c1952;
   color: white;
-  text-decoration: none;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .active-menu {

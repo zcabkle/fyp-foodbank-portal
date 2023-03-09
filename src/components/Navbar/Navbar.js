@@ -13,7 +13,7 @@ import MenuItem from '@mui/material/MenuItem';
 import GroupsIcon from '@mui/icons-material/Groups';
 import './Navbar.css';
 
-function Navbar2() {
+function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -152,4 +152,4 @@ function Navbar2() {
     </AppBar>
   );
 }
-export default Navbar2;
+export default Navbar;

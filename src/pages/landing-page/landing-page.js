@@ -10,7 +10,7 @@ function Item(props) {
   return (
     <Paper style={{ zIndex: '-3', textAlign: 'center', alignContent: 'center' }}>
       <img width="auto" height="500vh" src={props.item.src} />
-      <Typography variant="body2">
+      <Typography variant="body1" color="textSecondary">
         {props.item.description}
       </Typography>
       <br></br>
@@ -27,7 +27,6 @@ const LandingPage = () => {
   const [loadedSS, setLoadedSS] = useState(false)
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-
 
   if (!sessionStorage.getItem("userType")) {
     window.sessionStorage.setItem("userType", "")
@@ -81,20 +80,28 @@ const LandingPage = () => {
 
         <Box
           sx={{
-            alignItems: 'center',
+            textAlign: 'left',
             justifyContent: 'center',
             display: 'flex',
             mx: '50px'
           }}
         >
-          {userType === '' && <Typography variant='body1'> <br></br> </Typography>}
+          {
+          userType === '' && <Typography variant='body1' color="textSecondary"> <br></br> </Typography>
+          }
 
-          {userType === 'user' && <Typography variant='body1'> <br />  <li>Use the <Link href='/foodbanks'>foodbank tab</Link> to find foodbanks and browse their items or parcels from the dropdowns. </li>
+          {
+            userType === 'user' && <Typography variant='body1' color="textSecondary"> <br /> 
+            <li>Use the <Link href='/foodbanks'>foodbank tab</Link> to find foodbanks and browse their items or parcels from the dropdowns. </li>
             <li> Alternatively, view the items available across all of our branches and filter them on the <Link href='/items'>items tab</Link>. </li>
-            <li> Use the contact details provided to book a visit to the foodbank that can best support your needs at the moment. </li> <br /><br /></Typography>}
-          {userType === 'donator' && <Typography variant='body1'> <br />  <li>Use the <Link href='/foodbanks'>foodbank tab</Link> to find foodbanks and browse which items are in need at those foodbanks. </li>
+            <li> Use the contact details provided to book a visit to the foodbank that can best support your needs at the moment. </li> <br/><br/></Typography>
+          }
+          {
+            userType === 'donator' && <Typography variant='body1' color="textSecondary"> <br /> 
+            <li>Use the <Link href='/foodbanks'>foodbank tab</Link> to find foodbanks and browse which items are in need at those foodbanks. </li>
             <li> Alternatively, view the items available across all of our branches on the <Link href='/items'>items tab</Link> to see which foodbanks are in need of donations. </li>
-            <li> Use the contact details provided to book a visit to the foodbank that you would like to help out. </li> <br /><br /> </Typography>}
+            <li> Use the contact details provided to book a visit to the foodbank that you would like to help out. </li> <br/><br/></Typography>
+          }
         </Box>
       </Paper>
     )
@@ -162,12 +169,13 @@ const LandingPage = () => {
                         sx={{ pl: 1 }}
                         variant="h6"
                       >
-                      
+
                         &nbsp;
                         Our Mission Statement
                       </Typography>
                     </Box>
                     <Typography
+                      color="textSecondary"
                       variant="body1"
                       align="center"
                       sx={{ mt: 2, align: 'center' }}
@@ -229,6 +237,7 @@ const LandingPage = () => {
                       </Typography>
                     </Box>
                     <Typography
+                      color="textSecondary"
                       variant="body1"
                       sx={{ mt: 2 }}
                     >
@@ -277,6 +286,7 @@ const LandingPage = () => {
                       </Typography>
                     </Box>
                     <Typography
+                      color="textSecondary"
                       variant="body1"
                       sx={{ mt: 2 }}
                     >
@@ -326,6 +336,8 @@ const LandingPage = () => {
                       </Typography>
                     </Box>
                     <Typography
+                      id="here"
+                      color="textSecondary"
                       variant="body1"
                       sx={{ mt: 2 }}
                     >
@@ -426,7 +438,7 @@ const LandingPage = () => {
                     >
 
                       <li>For donators, our website provides an easy and convenient way to donate find where to donate the essential items that are currently needed by their local community.
-                        This helps both large and small donators to make a larger impact and support those who are struggling with hunger.</li>
+                        This helps both large and small donators to make a larger impact and support those who are struggling with hunger.</li><br></br>
                       <li>For foodbank users, our website offers the ability to browse stock before visiting a foodbank, enabling them to visit the foodbanks that best cater to their specific needs.
                         By utilizing our website, foodbank users can access the resources they need to help them and their families thrive.</li>
                       <br />We are committed to serving both donators and foodbank users alike, and we encourage everyone to explore our website

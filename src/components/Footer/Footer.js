@@ -1,8 +1,8 @@
 import {
-  Card,
+  Card, Typography,
 } from '@mui/material';
 
-export const Footer = () => {
+function Footer() {
   return (
     <Card>
       <Card sx={{
@@ -11,7 +11,9 @@ export const Footer = () => {
         textAlign: 'center',
         backgroundColor: 'background.default'
       }}>
-        Copyright © 2023 Kamil Ebanks
+        <Typography variant='body1' color="textSecondary">
+          Copyright © 2023 Kamil Ebanks
+        </Typography>
       </Card>
       <Card sx={{
         justifyContent: "center",
@@ -22,6 +24,8 @@ export const Footer = () => {
       }}>
         <br></br>
       </Card>
-      </Card>
+    </Card>
   )
 }
+
+export default Footer;

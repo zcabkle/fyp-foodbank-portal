@@ -9,7 +9,6 @@
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.5",
     "@reduxjs/toolkit": "^1.9.2",
-    "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/user-event": "^7.1.2",
     "i18next": "^22.4.9",
     "msw": "^1.1.0",
@@ -64,6 +63,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.22.2",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0"
   },
   "jest": {

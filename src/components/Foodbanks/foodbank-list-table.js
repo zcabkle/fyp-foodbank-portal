@@ -20,7 +20,6 @@ import { ChevronRight as ChevronRightIcon } from '../../icons/chevron-right';
 import { ChevronDown as ChevronDownIcon } from '../../icons/chevron-down';
 import { Image as ImageIcon } from '../../icons/image';
 import { Scrollbar } from '../scrollbar';
-import Launch from '@mui/icons-material/Launch';
 
 const FoodbankListTable = (props) => {
 
@@ -224,7 +223,7 @@ const FoodbankListTable = (props) => {
                                   <Link href={"/items/" + foodbank.cr967_foodbankid}> View the items at {foodbank.cr967_name} </Link>
                                   <br></br>
 
-                                  { (sessionStorage.getItem("userType") == 'user' || sessionStorage.getItem("userType") == '') && <Link href={"/parcels/" + foodbank.cr967_foodbankid}> View the parcels at  {foodbank.cr967_name} </Link>}
+                                  { (sessionStorage.getItem("userType") === 'user' || sessionStorage.getItem("userType") === '') && <Link href={"/parcels/" + foodbank.cr967_foodbankid}> View the parcels at  {foodbank.cr967_name} </Link>}
                                 </Typography>
                                 <Divider sx={{ my: 2 }} />
                                 <Grid

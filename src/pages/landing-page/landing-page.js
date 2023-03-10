@@ -9,7 +9,7 @@ import * as MdIcons from "react-icons/md";
 function Item(props) {
   return (
     <Paper style={{ zIndex: '-3', textAlign: 'center', alignContent: 'center' }}>
-      <img width="auto" height="500vh" src={props.item.src} />
+      <img width="auto" height="500vh" src={props.item.src} alt="carousel item"/>
       <Typography variant="body1" color="textSecondary">
         {props.item.description}
       </Typography>
@@ -168,6 +168,7 @@ const LandingPage = () => {
                         color="primary.main"
                         sx={{ pl: 1 }}
                         variant="h6"
+                        data-testid="Our Mission Statement"
                       >
 
                         &nbsp;

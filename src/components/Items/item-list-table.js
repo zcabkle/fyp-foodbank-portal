@@ -43,7 +43,7 @@ const getCategory = (n) => {
     case 8:
       return "Dry Food/Long Life";
     default:
-      return "HERE";
+      return "Category Not Given";
   }
 }
 
@@ -237,7 +237,7 @@ const ItemListTable = (props) => {
                               color="textSecondary"
                               variant="body2"
                             >
-                              {item.cr967_stocklevel === 0 && (sessionStorage.getItem("userType") == 'donator' || sessionStorage.getItem("userType") == '')&& "Donations requested!"}
+                              {item.cr967_stocklevel === 0 && (sessionStorage.getItem("userType") === 'donator' || sessionStorage.getItem("userType") === '')&& "Donations requested!"}
                             </Typography></Box>}
                         {
                           item.cr967_sharestocklevelwith !== 2 && <Typography
@@ -292,7 +292,7 @@ const ItemListTable = (props) => {
                                 <Typography variant="body1">
                                   <Link href={"/items/" + item._cr967_foodbankkey_value}> View the other items at {tags.filter(tag => tag.value === item._cr967_foodbankkey_value)[0].label} </Link>
                                   <br></br>
-                                  {sessionStorage.getItem("userType") == 'user' && <Link href={"/parcels/" + item._cr967_foodbankkey_value}> View the parcels at {tags.filter(tag => tag.value === item._cr967_foodbankkey_value)[0].label} </Link>}
+                                  {sessionStorage.getItem("userType") === 'user' && <Link href={"/parcels/" + item._cr967_foodbankkey_value}> View the parcels at {tags.filter(tag => tag.value === item._cr967_foodbankkey_value)[0].label} </Link>}
                                 </Typography>
 
                                 <Divider sx={{ my: 2 }} />

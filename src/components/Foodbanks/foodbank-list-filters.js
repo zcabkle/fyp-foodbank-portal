@@ -141,6 +141,7 @@ export const ListFilters = (props) => {
               }}
             >
               <Input
+                id='searchBar'
                 disableUnderline
                 fullWidth
                 onChange={handleQueryChange}

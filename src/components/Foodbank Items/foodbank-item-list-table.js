@@ -74,7 +74,7 @@ const FoodbankItemsListTable = (props) => {
                 <TableCell width="25%">
                   Name
                 </TableCell>
-                <TableCell width="25%">
+                <TableCell>
                   Item Category
                 </TableCell>
                 <TableCell>
@@ -174,7 +174,7 @@ const FoodbankItemsListTable = (props) => {
                           </Box>
                         </Box>
                       </TableCell>
-                      <TableCell width="25%">
+                      <TableCell>
                         <Typography
                           color="textSecondary"
                           variant="body2"

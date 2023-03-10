@@ -75,13 +75,13 @@ const ItemListTable = (props) => {
                 <TableCell width="25%">
                   Name
                 </TableCell>
-                <TableCell width="25%">
+                <TableCell width="18%">
                   Item Category
                 </TableCell>
-                <TableCell>
+                <TableCell width="18%">
                   Quantity
                 </TableCell>
-                <TableCell>
+                <TableCell width="18%">
                   Stock Level
                 </TableCell>
                 <TableCell>
@@ -178,7 +178,7 @@ const ItemListTable = (props) => {
                           </Box>
                         </Box>
                       </TableCell>
-                      <TableCell width="25%">
+                      <TableCell >
                         <Typography
                           color="textSecondary"
                           variant="body2"

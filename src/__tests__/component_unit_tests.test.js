@@ -15,16 +15,17 @@ import { ListFilters as FoodbankParcelsListFilters } from '../components/Foodban
 import ItemListTable from '../components/Items/item-list-table';
 import { ListFilters as ItemListFilters } from '../components/Items/item-list-filters'
 import {server} from "../test_utility/mockServer"
+import{ mockFoodbanks } from "../test_utility/mockFoodbanks"
 
 // establish API mocking before all tests
 beforeAll(() => server.listen())
 afterEach(async () => {
   server.resetHandlers();
-  await new Promise((r) => setTimeout(r, 250));
+  await new Promise((r) => setTimeout(r, 5));
 })
 afterAll(() => server.close())
 
-test('renders the footer', async () => {
+test('render the footer', async () => {
   const result = render(< Footer />);
 });
 
@@ -81,16 +82,20 @@ test('render the multiselect and open it and select a new value', async () => {
 
 });
 
-test('renders the foodbank list table', async () => {
+test('renders the foodbank list table and opens the first item', async () => {
   const result = render(
     <FoodbankListTable
       onPageChange={() => void 0}
       onRowsPerPageChange={() => void 0}
-      foodbanks={[]}
-      foodbanksCount={0}
+      foodbanks={mockFoodbanks}
+      foodbanksCount={3}
       page={0}
       rowsPerPage={5} />
   );
+
+  var button = screen.getAllByRole('button')[0]
+  fireEvent.click(button)
+
 });
 
 test('renders the foodbank list filters', async () => {

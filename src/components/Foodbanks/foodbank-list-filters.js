@@ -117,9 +117,6 @@ export const ListFilters = (props) => {
     return values;
   }, [filterItems]);
 
-  console.log("POSTCODE OPTIONS", postcodeOptions);
-  console.log("POSTCODE VALUES", postcodeValues);
-
   return (
     <div {...other}>
 

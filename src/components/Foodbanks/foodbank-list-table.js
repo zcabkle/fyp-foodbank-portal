@@ -239,7 +239,7 @@ const FoodbankListTable = (props) => {
                                     <Typography variant="body1">
                                       <Link
                                         href={"https://www.google.com/maps/dir/?api=1&destination=" + foodbank.cr967_address.replace(/\s+/g, '+') + "%2C+" + foodbank.cr967_postcode.replace(/\s+/g, '+') + "%2C+" + foodbank.cr967_name.replace(/\s+/g, '+') + "&travelmode=walking"}
-                                        endDecorator={<Launch />}
+                                        //endDecorator={<Launch />}
                                         underline="hover">
                                         Google Maps Directions
                                       </Link>

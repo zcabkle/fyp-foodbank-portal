@@ -85,54 +85,64 @@ const FoodbankItemsPage = () => {
   const foodbankName = foodbanks?.filter((foodbank) => foodbank.cr967_foodbankid === guid)[0]?.cr967_name
 
   return (
-    <Box
-      component="main"
-      sx={{
-        flexGrow: 1,
-        py: 8
-      }}
+    <Grid
+      container
+      spacing={3}
     >
-      <Container maxWidth="xl">
-        <Box sx={{ mb: 4 }}>
-          <Grid
-            container
-            justifyContent="space-between"
-            spacing={3}
-          >
-            <Grid item>
-              <Typography variant="h4">
-                {foodbankName && 'Items at ' + foodbankName}
-              </Typography>
-            </Grid>
-          </Grid>
-        </Box>
-
-        {(loading || error) ? (
-          <Card>
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: "center",
-                minHeight: "10vh",
-                mt: 3
-              }}>
-              {error || <CircularProgress />}
+      <Grid item md={1}></Grid>
+      <Grid item md={10}
+        xs={12}>
+        <Box
+          component="main"
+          sx={{
+            flexGrow: 1,
+            py: 8
+          }}
+        >
+          <Container maxWidth="xl">
+            <Box sx={{ mb: 4 }}>
+              <Grid
+                container
+                justifyContent="space-between"
+                spacing={3}
+              >
+                <Grid item>
+                  <Typography variant="h4">
+                    {foodbankName && 'Items at ' + foodbankName}
+                  </Typography>
+                </Grid>
+              </Grid>
             </Box>
-          </Card>
-        ) : (
-          <Card>
-            <ListFilters onChange={handleFiltersChange} />
-            <FoodbankItemsListTable
-              onPageChange={handlePageChange}
-              onRowsPerPageChange={handleRowsPerPageChange}
-              items={paginatedItems}
-              itemsCount={filteredItems.length}
-              page={page}
-              rowsPerPage={rowsPerPage} />
-          </Card>)}
-      </Container>
-    </Box>
+
+            {(loading || error) ? (
+              <Card>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: "center",
+                    minHeight: "10vh",
+                    mt: 3
+                  }}>
+                  {error || <CircularProgress />}
+                </Box>
+              </Card>
+            ) : (
+              <Card>
+                <ListFilters onChange={handleFiltersChange} />
+                <FoodbankItemsListTable
+                  onPageChange={handlePageChange}
+                  onRowsPerPageChange={handleRowsPerPageChange}
+                  items={paginatedItems}
+                  itemsCount={filteredItems.length}
+                  page={page}
+                  rowsPerPage={rowsPerPage} />
+              </Card>)}
+          </Container>
+        </Box>
+      </Grid>
+      <Grid item md={1}></Grid>
+    </Grid>
   );
 };
 

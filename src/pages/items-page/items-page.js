@@ -48,7 +48,7 @@ const ItemsPage = () => {
     return container;
   })
 
-  const foodbank_tags = [{label:'All', value:'all'}].concat(temp_foodbank_tags);
+  const foodbank_tags = [{ label: 'All', value: 'all' }].concat(temp_foodbank_tags);
 
   const applyFilters = (products, filters) => products.filter((product) => {
     if (filters.name) {
@@ -112,55 +112,65 @@ const ItemsPage = () => {
   const paginatedItems = applyPagination(filteredItems, page, rowsPerPage);
 
   return (
-    <Box
-      component="main"
-      sx={{
-        flexGrow: 1,
-        py: 8
-      }}
+    <Grid
+      container
+      spacing={3}
     >
-      <Container maxWidth="xl">
-        <Box sx={{ mb: 4 }}>
-          <Grid
-            container
-            justifyContent="space-between"
-            spacing={3}
-          >
-            <Grid item>
-              <Typography variant="h4">
-                Items
-              </Typography>
-            </Grid>
-          </Grid>
-        </Box>
-
-        {(loading || error) ? (
-          <Card>
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: "center",
-                minHeight: "10vh",
-                mt: 3
-              }}>
-              {error || <CircularProgress />}
+      <Grid item md={1}></Grid>
+      <Grid item md={10}
+        xs={12}>
+        <Box
+          component="main"
+          sx={{
+            flexGrow: 1,
+            py: 8
+          }}
+        >
+          <Container maxWidth="xl">
+            <Box sx={{ mb: 4 }}>
+              <Grid
+                container
+                justifyContent="space-between"
+                spacing={3}
+              >
+                <Grid item>
+                  <Typography variant="h4">
+                    Items
+                  </Typography>
+                </Grid>
+              </Grid>
             </Box>
-          </Card>
-        ) : (
-          <Card>
-            <ListFilters onChange={handleFiltersChange} foodbankOptions={foodbank_tags}/>
-            <ItemListTable
-              onPageChange={handlePageChange}
-              onRowsPerPageChange={handleRowsPerPageChange}
-              items={paginatedItems}
-              itemsCount={filteredItems.length}
-              tags={foodbank_tags}
-              page={page}
-              rowsPerPage={rowsPerPage} />
-            </Card>)}
-      </Container>
-    </Box>
+
+            {(loading || error) ? (
+              <Card>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: "center",
+                    minHeight: "10vh",
+                    mt: 3
+                  }}>
+                  {error || <CircularProgress />}
+                </Box>
+              </Card>
+            ) : (
+              <Card>
+                <ListFilters onChange={handleFiltersChange} foodbankOptions={foodbank_tags} />
+                <ItemListTable
+                  onPageChange={handlePageChange}
+                  onRowsPerPageChange={handleRowsPerPageChange}
+                  items={paginatedItems}
+                  itemsCount={filteredItems.length}
+                  tags={foodbank_tags}
+                  page={page}
+                  rowsPerPage={rowsPerPage} />
+              </Card>)}
+          </Container>
+        </Box>
+      </Grid>
+      <Grid item md={1}></Grid>
+    </Grid>
   );
 };
 

@@ -28,7 +28,7 @@ function Navbar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <GroupsIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <GroupsIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, fontSize: '32px' }} />
           <Typography
             variant="h6"
             noWrap
@@ -39,7 +39,6 @@ function Navbar() {
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
@@ -93,7 +92,7 @@ function Navbar() {
               </MenuItem>
             </Menu>
           </Box>
-          <GroupsIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <GroupsIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, fontSize: '32px'}} />
           <Typography
             variant="h5"
             noWrap
@@ -105,7 +104,6 @@ function Navbar() {
               flexGrow: 1,
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
@@ -140,11 +138,11 @@ function Navbar() {
               </Button>
 
               <Button
-                key={'help'}
+                key={'about'}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <NavLink to="/help" className={(navData) => (navData.isActive ? "active-link" : 'link-item')}>Help</NavLink>
+                <NavLink to="/about" className={(navData) => (navData.isActive ? "active-link" : 'link-item')}>About</NavLink>
               </Button>
           </Box>
         </Toolbar>

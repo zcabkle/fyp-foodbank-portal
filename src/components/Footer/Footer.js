@@ -12,7 +12,7 @@ function Footer() {
         backgroundColor: 'background.default'
       }}>
         <Typography variant='body1' color="textSecondary">
-          Copyright © 2023 Kamil Ebanks
+          Copyright © 2023
         </Typography>
       </Card>
       <Card sx={{

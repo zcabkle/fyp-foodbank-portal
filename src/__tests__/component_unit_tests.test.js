@@ -6,32 +6,15 @@ import Footer from '../components/Footer/Footer'
 import ApplicationRouter from '../routing/ApplicationRouter';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { SeverityPill } from '../components/severity-pill';
-import { rest } from 'msw'
-import { setupServer } from 'msw/node'
-
 import FoodbankItemsListTable from '../components/Foodbank Items/foodbank-item-list-table';
 import { ListFilters as FoodbankItemsListFilters } from '../components/Foodbank Items/foodbank-item-list-filters'
-
 import FoodbankListTable from '../components/Foodbanks/foodbank-list-table';
 import { ListFilters as FoodbankListFilters } from '../components/Foodbanks/foodbank-list-filters'
-
 import FoodbankParcelsListTable from '../components/Foodbank Parcels/foodbank-parcel-list-table';
 import { ListFilters as FoodbankParcelsListFilters } from '../components/Foodbank Parcels/foodbank-parcel-list-filters'
-
 import ItemListTable from '../components/Items/item-list-table';
 import { ListFilters as ItemListFilters } from '../components/Items/item-list-filters'
-
-const server = setupServer(
-  rest.get('/api/stats', (req, res, ctx) => {
-    // respond using a mocked JSON body
-
-    return res(ctx.json({
-      items_count: 1,
-      foodbanks_count: 2,
-      visits_count: 3
-    }))
-  }),
-)
+import {server} from "../test_utility/mockServer"
 
 // establish API mocking before all tests
 beforeAll(() => server.listen())

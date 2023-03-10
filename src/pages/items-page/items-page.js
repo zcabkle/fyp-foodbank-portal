@@ -39,6 +39,7 @@ const ItemsPage = () => {
     }
   }, []);
 
+  console.log("ITEMS HERE", items)
   var temp_foodbank_tags = foodbanks.map(foodbank => {
     const container = {};
 

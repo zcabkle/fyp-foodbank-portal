@@ -215,8 +215,8 @@ const LandingPage = () => {
                 md={4}
                 xs={12}
               >
-                <Card>
-                  <CardContent>
+                <Card  style={{ height: '100%' }}>
+                  <CardContent >
                     <Box
                       sx={{
                         alignItems: 'center',
@@ -241,8 +241,7 @@ const LandingPage = () => {
                       variant="body1"
                       sx={{ mt: 2 }}
                     >
-
-                      We are excited to announce that {foodbanksCount} branches are registered to our foodbank network! This is a great milestone in our efforts to combat food insecurity and provide easier access to those in need.
+                      {foodbanksCount} branches are registered to our foodbank network! This is an amazing milestone in our efforts to combat food insecurity all across the UK.
                     </Typography>
                   </CardContent>
                   <Divider />
@@ -263,7 +262,7 @@ const LandingPage = () => {
                 md={4}
                 xs={12}
               >
-                <Card>
+                <Card  style={{ height: '100%' }}>
                   <CardContent>
                     <Box
                       sx={{
@@ -313,8 +312,8 @@ const LandingPage = () => {
                 md={4}
                 xs={12}
               >
-                <Card>
-                  <CardContent>
+                <Card  style={{ height: '100%' }}>
+                  <CardContent >
                     <Box
                       sx={{
                         alignItems: 'center',
@@ -341,7 +340,7 @@ const LandingPage = () => {
                       variant="body1"
                       sx={{ mt: 2 }}
                     >
-                      We are pleased to announce that our foodbank network now offers a total of {itemCount} different items to help combat hunger and provide much-needed sustenance to those in need.
+                      Our foodbank network now offers a total of {itemCount} different items in order to help combat hunger and provide much-needed sustenance to those in need.
                     </Typography>
                   </CardContent>
                   <Divider />

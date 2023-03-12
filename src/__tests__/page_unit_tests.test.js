@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom'
 import { screen } from '@testing-library/dom';
 import LandingPage from '../pages/landing-page/landing-page'
@@ -23,31 +23,52 @@ afterAll(() => server.close())
 
 test('renders the landing page', async () => {
   const result = render(<LandingPage />);
+
+  await waitFor(async () => {
+    expect((await screen.findAllByRole('heading'))[0]).toBeInTheDocument()
+    expect((await screen.findAllByRole('heading'))[0]).toHaveTextContent("Mission Statement")
+  });
+
 });
 
 test('renders the foodbanks page', async () => {
   const result = render(<FoodbanksPage />);
+
+  await waitFor(async () => {
+    expect((await screen.findAllByRole('heading'))[0]).toBeInTheDocument()
+    expect((await screen.findAllByRole('heading'))[0]).toHaveTextContent("Foodbanks")
+  });
 
 });
 
 test('renders the items page', async () => {
   const result = render(<ItemsPage />);
 
+  await waitFor(async () => {
+    expect((await screen.findAllByRole('heading'))[0]).toBeInTheDocument()
+    expect((await screen.findAllByRole('heading'))[0]).toHaveTextContent("Items")
+  });
 
 });
 
-test('renders the foodbank items page', async () => {
+test('renders the foodbank items page with the correct foodbank name', async () => {
   window.history.pushState({}, 'Test Page Title', `/url/512cf0c1-e290-ed11-aad1-000d3adf443b`)
   const result = render(<FoodbankItemsPage />);
 
-  setTimeout(function () {
-    expect(screen.getByText('Items at', { exact: false })).toBeInTheDocument()
-  }, 5000);
+  await waitFor(async () => {
+    expect((await screen.findAllByRole('heading'))[0]).toBeInTheDocument()
+    expect((await screen.findAllByRole('heading'))[0]).toHaveTextContent("Items at St Pancreas New Church")
+  });
 
 });
 
-test('renders the foodbank parcels page', async () => {
+test('renders the foodbank parcels page with the correct foodbank name', async () => {
   window.history.pushState({}, 'Test Page Title', `/url/512cf0c1-e290-ed11-aad1-000d3adf443b`)
   const result = render(<FoodbankParcelsPage />);
+
+  await waitFor(async () => {
+    expect((await screen.findAllByRole('heading'))[0]).toBeInTheDocument()
+    expect((await screen.findAllByRole('heading'))[0]).toHaveTextContent("Parcels at St Pancreas New Church")
+  });
 
 });

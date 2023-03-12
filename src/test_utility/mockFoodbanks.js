@@ -1,4 +1,5 @@
-export const mockFoodbanks = [
+export const mockFoodbanks = {
+  value: [
     {
       cr967_address: "165 Euston Road",
       cr967_email: "stpancreasnewchurch@gmail.com",
@@ -32,4 +33,5 @@ export const mockFoodbanks = [
       cr967_postcode: "NW1 0AD",
       cr967_town: "London"
     }
-]
+  ]
+}

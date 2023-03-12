@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, getByText } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import Navbar from "../components/Navbar/Navbar"
 import { MultiSelect } from '../components/multi-select';
 import { Scrollbar } from '../components/scrollbar';
@@ -89,7 +89,7 @@ test('renders the foodbank list table and opens the first item', async () => {
     <FoodbankListTable
       onPageChange={() => void 0}
       onRowsPerPageChange={() => void 0}
-      foodbanks={mockFoodbanks}
+      foodbanks={mockFoodbanks.value}
       foodbanksCount={3}
       page={0}
       rowsPerPage={5} />
@@ -121,7 +121,7 @@ test('renders the foodbank parcel list table', async () => {
     <FoodbankParcelsListTable
       onPageChange={() => void 0}
       onRowsPerPageChange={() => void 0}
-      parcels={mockParcels}
+      parcels={mockParcels.value}
       parcelsCount={2}
       page={0}
       rowsPerPage={5} />
@@ -144,7 +144,7 @@ test('renders the foodbank items list table and clicks on the first item', async
     <FoodbankItemsListTable
       onPageChange={() => void 0}
       onRowsPerPageChange={() => void 0}
-      items={mockItems}
+      items={mockItems.value}
       itemsCount={10}
       page={0}
       rowsPerPage={5}
@@ -171,7 +171,7 @@ test('renders the items list table and open the first item', async () => {
     <ItemListTable
       onPageChange={() => void 0}
       onRowsPerPageChange={() => void 0}
-      items={mockItems}
+      items={mockItems.value}
       itemsCount={10}
       page={0}
       rowsPerPage={5}
@@ -181,7 +181,7 @@ test('renders the items list table and open the first item', async () => {
   fireEvent.click(button)
 });
 
-test('renders the items list filters', async () => {
+test('renders the items list filters, clicks the multiselect and clicks the nr', async () => {
   const result = render(
     <ItemListFilters onChange={() => void 0} foodbankOptions={[]}/>
   );

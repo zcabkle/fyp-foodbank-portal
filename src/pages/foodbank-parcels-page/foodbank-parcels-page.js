@@ -27,7 +27,7 @@ const FoodbankParcelsPage = () => {
           setParcels(res.parcels.value)
           setFoodbanks(res.foodbank_names.value)
         })
-        .then(() => setLoading(false));
+        .then(() => {setLoading(false); console.log(parcels)});
     } catch (e) {
       setLoading(false);
       setError(e.message);
@@ -119,7 +119,8 @@ const FoodbankParcelsPage = () => {
                 {error || <CircularProgress />}
               </Box></Card>
             ) : (
-              <Card><ListFilters onChange={handleFiltersChange} />
+              <Card>
+                <ListFilters onChange={handleFiltersChange} />
                 <FoodbankParcelsListTable
                   onPageChange={handlePageChange}
                   onRowsPerPageChange={handleRowsPerPageChange}

@@ -27,7 +27,7 @@ const FoodbankParcelsPage = () => {
           setParcels(res.parcels.value)
           setFoodbanks(res.foodbank_names.value)
         })
-        .then(() => {setLoading(false); console.log(parcels)});
+        .then(() => {setLoading(false);});
     } catch (e) {
       setLoading(false);
       setError(e.message);

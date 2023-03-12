@@ -1,4 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom'
 import Navbar from "../components/Navbar/Navbar"
 import { MultiSelect } from '../components/multi-select';
 import { Scrollbar } from '../components/scrollbar';
@@ -54,6 +55,9 @@ test('render the navbar for mobile and open it', async () => {
 
   var button = screen.getAllByRole('button')[0]
   fireEvent.click(button)
+
+  expect(screen.getAllByRole('menu')[0]).toBeInTheDocument()
+
 });
 
 test('renders the severity pill', async () => {
@@ -64,6 +68,7 @@ test('renders the scrollbar', async () => {
   const result = render(< Scrollbar />);
 });
 
+// Replace with full app rendering?
 test('renders the router', async () => {
   const result = render(< ApplicationRouter />);
 });
@@ -76,15 +81,17 @@ test('render the multiselect and open it and select a new value', async () => {
       options={[{label: "All", value: "all"}, {value: "NW1", label: "NW1"}, {value: "WC1H", label: "WC1H"}]}
       value={['all']} />);
 
+  expect(screen.getByRole('button')).toBeInTheDocument()
   var button = screen.getByRole('button')
   fireEvent.click(button)
 
+  expect(screen.getAllByRole('menuitem')[1]).toBeInTheDocument()
   var new_checkbox = screen.getAllByRole('menuitem')[1].querySelector('input')
-
   fireEvent.click(new_checkbox)
+
 });
 
-test('renders the foodbank list table and opens the first item', async () => {
+test('renders the foodbank list table and click to open the first item', async () => {
   const result = render(
     <FoodbankListTable
       onPageChange={() => void 0}
@@ -95,6 +102,7 @@ test('renders the foodbank list table and opens the first item', async () => {
       rowsPerPage={5} />
   );
 
+  expect(screen.getAllByRole('button')[0]).toBeInTheDocument()
   var button = screen.getAllByRole('button')[0]
   fireEvent.click(button)
 
@@ -105,12 +113,15 @@ test('renders the foodbank list filters', async () => {
     <FoodbankListFilters onChange={() => void 0} postcodeOptions={mockTags}/>
   );
 
+  expect(screen.getAllByRole('button')[0]).toBeInTheDocument()
   var multiselect = screen.getAllByRole('button')[0]
   fireEvent.click(multiselect)
 
+  expect(screen.getAllByRole('menuitem')[1].querySelector('input')).toBeInTheDocument()
   var new_checkbox = screen.getAllByRole('menuitem')[1].querySelector('input')
   fireEvent.click(new_checkbox)
 
+  expect(screen.getByPlaceholderText('Filter by foodbank name')).toBeInTheDocument()
   var searchbar = screen.getByPlaceholderText('Filter by foodbank name')
   userEvent.type(searchbar, "searchterm");
   fireEvent.submit(searchbar);
@@ -126,6 +137,11 @@ test('renders the foodbank parcel list table', async () => {
       page={0}
       rowsPerPage={5} />
   );
+
+  // Expect the 2 items to be in the table
+  expect(screen.getAllByRole('heading')).toHaveLength(2)
+  expect(screen.getAllByRole('heading')[0]).toBeInTheDocument()
+
 });
 
 test('renders the foodbank parcels list filters', async () => {
@@ -135,11 +151,10 @@ test('renders the foodbank parcels list filters', async () => {
   var searchbar = screen.getByPlaceholderText('Search for parcel')
   userEvent.type(searchbar, "searchterm");
   fireEvent.submit(searchbar);
-
   
 });
 
-test('renders the foodbank items list table and clicks on the first item', async () => {
+test('renders the foodbank items list table and clicks to open the first item', async () => {
   const result = render(
     <FoodbankItemsListTable
       onPageChange={() => void 0}
@@ -150,8 +165,11 @@ test('renders the foodbank items list table and clicks on the first item', async
       rowsPerPage={5}
       tags={mockTags} />
   );
+
+  expect(screen.getAllByRole('button')[0]).toBeInTheDocument()
   var button = screen.getAllByRole('button')[0]
   fireEvent.click(button)
+
 });
 
 test('renders the foodbank items list filters', async () => {
@@ -159,14 +177,16 @@ test('renders the foodbank items list filters', async () => {
     <FoodbankItemsListFilters onChange={() => void 0} />
   );
 
+  expect(screen.getAllByRole('button')[0]).toBeInTheDocument()
   var multiselect = screen.getAllByRole('button')[0]
   fireEvent.click(multiselect)
 
+  expect(screen.getAllByRole('menuitem')[1].querySelector('input')).toBeInTheDocument()
   var new_checkbox = screen.getAllByRole('menuitem')[1].querySelector('input')
   fireEvent.click(new_checkbox)
 });
 
-test('renders the items list table and open the first item', async () => {
+test('renders the items list table and clicks to open the first item', async () => {
   const result = render(
     <ItemListTable
       onPageChange={() => void 0}
@@ -177,18 +197,23 @@ test('renders the items list table and open the first item', async () => {
       rowsPerPage={5}
       tags={mockTags} />
   );
+
+  expect(screen.getAllByRole('button')[0]).toBeInTheDocument()
   var button = screen.getAllByRole('button')[0]
   fireEvent.click(button)
+
 });
 
-test('renders the items list filters, clicks the multiselect and clicks the nr', async () => {
+test('renders the items list filters, clicks the multiselect and clicks an option', async () => {
   const result = render(
     <ItemListFilters onChange={() => void 0} foodbankOptions={[]}/>
   );
 
+  expect(screen.getAllByRole('button')[0]).toBeInTheDocument()
   var multiselect = screen.getAllByRole('button')[0]
   fireEvent.click(multiselect)
 
+  expect(screen.getAllByRole('menuitem')[1].querySelector('input')).toBeInTheDocument()
   var new_checkbox = screen.getAllByRole('menuitem')[1].querySelector('input')
   fireEvent.click(new_checkbox)
 });

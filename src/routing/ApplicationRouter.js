@@ -22,7 +22,7 @@ function ApplicationRouter() {
                     <Route path="items/:id" element={<FoodbankItemsPage />} />
                     <Route path="parcels/:id" element={<FoodbankParcelsPage />} />
                     <Route path='about' element={< AboutPage />} />
-                    <Route path="*" element={<ErrorComponent/>} />
+                    <Route path="*" element={<ErrorComponent/>} status={404}/>
                 </Routes>
                 <Footer/>
             </Router>

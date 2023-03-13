@@ -250,10 +250,10 @@ const LandingPage = () => {
                     <Button
                       endIcon={<ArrowRightIcon fontSize="small" />}
                       size="small"
+                      href="/foodbanks"
                     >
-                      <Link href="/foodbanks" underline="none">
                         Browse Foodbanks
-                      </Link>
+
                     </Button>
                   </CardActions>
                 </Card>
@@ -298,11 +298,9 @@ const LandingPage = () => {
                     <Button
                       endIcon={<ArrowRightIcon fontSize="small" />}
                       size="small"
+                      href="/foodbanks"
                     >
-                      <Link href="/foodbanks" underline="none">
-                        Dicover Foodbanks
-                      </Link>
-
+                        Discover Foodbanks
                     </Button>
                   </CardActions>
                 </Card>
@@ -349,10 +347,9 @@ const LandingPage = () => {
                     <Button
                       endIcon={<ArrowRightIcon fontSize="small" />}
                       size="small"
+                      href="/items"
                     >
-                      <Link href="/items" underline="none">
                         Browse Items
-                      </Link>
                     </Button>
                   </CardActions>
                 </Card>

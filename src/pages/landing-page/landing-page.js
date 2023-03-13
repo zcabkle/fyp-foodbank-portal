@@ -372,14 +372,7 @@ const LandingPage = () => {
                         sx={{ pl: 1 }}
                         variant="h6"
                       >
-                        <FaIcons.FaQuestionCircle />
-                      </Typography>
-                      <Typography
-                        color="primary.main"
-                        sx={{ pl: 1 }}
-                        variant="h6"
-                      >
-                        What is this project?
+                        <FaIcons.FaQuestionCircle /> &nbsp; What is this project?
                       </Typography>
                     </Box>
                     <br></br>
@@ -418,14 +411,7 @@ const LandingPage = () => {
                         sx={{ pl: 1 }}
                         variant="h6"
                       >
-                        <FaIcons.FaQuestionCircle />
-                      </Typography>
-                      <Typography
-                        color="primary.main"
-                        sx={{ pl: 1 }}
-                        variant="h6"
-                      >
-                        Who does this website serve?
+                        <FaIcons.FaQuestionCircle /> &nbsp; Who does this website serve?
                       </Typography>
                     </Box>
                     <br></br>

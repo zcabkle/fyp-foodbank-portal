@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import FoodbankParcelsPage from "../pages/foodbank-parcels-page/foodbank-parcels-page";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-import ErrorComponent from "../components/Error/ErrorComponent";
+import ErrorPage from "../pages/error-page/error-page";
 
 function ApplicationRouter() {
     return (
@@ -22,7 +22,7 @@ function ApplicationRouter() {
                     <Route path="items/:id" element={<FoodbankItemsPage />} />
                     <Route path="parcels/:id" element={<FoodbankParcelsPage />} />
                     <Route path='about' element={< AboutPage />} />
-                    <Route path="*" element={<ErrorComponent/>} status={404}/>
+                    <Route path="*" element={<ErrorPage/>}/>
                 </Routes>
                 <Footer/>
             </Router>

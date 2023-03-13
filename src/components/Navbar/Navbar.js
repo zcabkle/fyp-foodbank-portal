@@ -113,43 +113,33 @@ function Navbar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
             <NavLink to="/" className={(navData) => (navData.isActive ? "active-link" : 'link-item')}>
-              <Button
-                key={'overview'}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+              <Box
+                sx={{ my: 2, pr: 2, color: 'white', display: 'block' }}
               >
                 Overview
-              </Button>
+              </Box>
             </NavLink>
 
             <NavLink to="/foodbanks" className={(navData) => (navData.isActive ? "active-link" : 'link-item')}>
-              <Button
-                key={'foodbank_branches'}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+              <Box
+                sx={{ my: 2, pr: 2, color: 'white', display: 'block' }}
               >
                 Foodbank Branches
-              </Button>
+              </Box>
             </NavLink>
 
             <NavLink to="/items" className={(navData) => (navData.isActive ? "active-link" : 'link-item')}>
-              <Button
-                key={'items'}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
+                <Box sx={{ my: 2, pr: 2, color: 'white', display: 'block' }}>
                 Items
-              </Button>
+                </Box>
             </NavLink>
 
             <NavLink to="/about" className={(navData) => (navData.isActive ? "active-link" : 'link-item')}>
-              <Button
-                key={'about'}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+              <Box
+                sx={{ my: 2, pr: 2, color: 'white', display: 'block' }}
               >
                 About
-              </Button>
+              </Box>
             </NavLink>
           </Box>
         </Toolbar>

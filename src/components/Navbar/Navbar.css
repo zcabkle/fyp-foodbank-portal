@@ -2,24 +2,24 @@
   color: white;
   text-decoration: underline;
   font-weight: bold;
-  background-color: transparent;
+  background: transparent;
 }
 
 .active-menu {
   background-color: #5048e573;
   color: black;
   text-decoration: none;
-  background-color: transparent;
+  background: transparent;
 }
 
 .link-item {
   color: white;
   text-decoration: none;
-  background-color: transparent;
+  background: transparent;
 }
 
 .menu-item {
   color: black;
   text-decoration: none;
-  background-color: transparent;
+  background: transparent;
 }

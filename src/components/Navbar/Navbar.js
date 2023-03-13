@@ -92,7 +92,7 @@ function Navbar() {
               </MenuItem>
             </Menu>
           </Box>
-          <GroupsIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, fontSize: '32px'}} />
+          <GroupsIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, fontSize: '32px' }} />
           <Typography
             variant="h5"
             noWrap
@@ -112,38 +112,45 @@ function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
-
+            <NavLink to="/" className={(navData) => (navData.isActive ? "active-link" : 'link-item')}>
               <Button
                 key={'overview'}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <NavLink to="/" className={(navData) => (navData.isActive ? "active-link" : 'link-item')}>Overview</NavLink>
+                Overview
               </Button>
+            </NavLink>
 
+            <NavLink to="/foodbanks" className={(navData) => (navData.isActive ? "active-link" : 'link-item')}>
               <Button
                 key={'foodbank_branches'}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <NavLink to="/foodbanks" className={(navData) => (navData.isActive ? "active-link" : 'link-item')}>Foodbank Branches</NavLink>
+                Foodbank Branches
               </Button>
+            </NavLink>
 
+            <NavLink to="/items" className={(navData) => (navData.isActive ? "active-link" : 'link-item')}>
               <Button
                 key={'items'}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <NavLink to="/items" className={(navData) => (navData.isActive ? "active-link" : 'link-item')}>Items</NavLink>
+                Items
               </Button>
+            </NavLink>
 
+            <NavLink to="/about" className={(navData) => (navData.isActive ? "active-link" : 'link-item')}>
               <Button
                 key={'about'}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <NavLink to="/about" className={(navData) => (navData.isActive ? "active-link" : 'link-item')}>About</NavLink>
+                About
               </Button>
+            </NavLink>
           </Box>
         </Toolbar>
       </Container>

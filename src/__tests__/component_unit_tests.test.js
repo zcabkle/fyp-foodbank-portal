@@ -15,11 +15,11 @@ import FoodbankParcelsListTable from '../components/Foodbank Parcels/foodbank-pa
 import { ListFilters as FoodbankParcelsListFilters } from '../components/Foodbank Parcels/foodbank-parcel-list-filters'
 import ItemListTable from '../components/Items/item-list-table';
 import { ListFilters as ItemListFilters } from '../components/Items/item-list-filters'
-import {server} from "../test_utility/mockServer"
-import{ mockFoodbanks } from "../test_utility/mockFoodbanks"
-import { mockItems } from '../test_utility/mockItems';
-import { mockTags } from '../test_utility/mockTags';
-import { mockParcels } from '../test_utility/mockParcels';
+import {server} from "./test_utility/mockServer"
+import{ mockFoodbanks } from "./test_utility/mockFoodbanks"
+import { mockItems } from './test_utility/mockItems';
+import { mockTags } from './test_utility/mockTags';
+import { mockParcels } from './test_utility/mockParcels';
 import userEvent from '@testing-library/user-event';
 
 // establish API mocking before all tests

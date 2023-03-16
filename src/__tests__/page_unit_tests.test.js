@@ -6,7 +6,7 @@ import FoodbanksPage from '../pages/foodbanks-page/foodbanks-page';
 import ItemsPage from '../pages/items-page/items-page';
 import FoodbankParcelsPage from '../pages/foodbank-parcels-page/foodbank-parcels-page';
 import FoodbankItemsPage from '../pages/foodbank-items-page/foodbank-items-page';
-import { server } from "../test_utility/mockServer"
+import { server } from "./test_utility/mockServer"
 
 // establish API mocking before all tests
 beforeAll(() => {

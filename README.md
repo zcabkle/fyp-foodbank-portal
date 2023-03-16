@@ -6,11 +6,15 @@ Initial project files were set up with a [template ](staticwebdev/react-basic) w
 
 ## Other Important Deliverables
 
-Here are the other deliverables that I have created as part of this project.<br>
-[Video overview of the project](https://www.youtube.com)<br>
+Here are all deliverables that I have created as part of this project.<br>
+[Repo for Foodbank User Portal on Azure Static WebApps](https://github.com/zcabkle/fyp-foodbank-portal)<br>
 [Repo for Foodbank Worker Portal on PowerApps](https://github.com/zcabkle/pa-foodbank-worker-app)<br>
 [Repo for Admin Portal on PowerApps]()<br>
 [TestStudio Configuration for Foodbank Worker Portal]()<br>
+
+[Video Overview of the Project](https://www.youtube.com)<br>
+[Blog Submission]()<br>
+
 
 ## This repo is currently being hosted. Access it at this link.
 https://gentle-beach-0e3070003.2.azurestaticapps.net
@@ -37,7 +41,7 @@ To clone and deploy this repo yourself follow these steps.
 9. When app creation is a success, you will see this notification <br> <img width="645" alt="image" src="https://user-images.githubusercontent.com/73954803/225748908-3f06c557-0dd1-4293-9ac2-5c8b100752a7.png">
 10. Access the production version here. This menu can be found when you enter the Azure extensions window. <img width="600" alt="image" src="https://user-images.githubusercontent.com/73954803/225749149-f10d31d2-53be-4657-a40b-e832944648b4.png">
 
-Any further commits to the main branch will be deployed to production due to the GitHub Action. The config for this is found in the 
+Any further commits to the main branch will be deployed to production due to the GitHub Action. The config for this is found in the **NEED TO WRITE FILENAME HERE**
 
 ## Azure Portal
 

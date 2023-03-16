@@ -420,10 +420,10 @@ const LandingPage = () => {
                       variant="body1"
                     >
 
-                      <li>For donators, our website provides an easy and convenient way to donate find where to donate the essential items that are currently needed by their local community.
-                        This helps both large and small donators to make a larger impact and support those who are struggling with hunger.</li><br></br>
-                      <li>For foodbank users, our website offers the ability to browse stock before visiting a foodbank, enabling them to visit the foodbanks that best cater to their specific needs.
-                        By utilizing our website, foodbank users can access the resources they need to help them and their families thrive.</li>
+                      <ul>For donators, our website provides an easy and convenient way to donate find where to donate the essential items that are currently needed by their local community.
+                        This helps both large and small donators to make a larger impact and support those who are struggling with hunger.</ul><br></br>
+                      <ul>For foodbank users, our website offers the ability to browse stock before visiting a foodbank, enabling them to visit the foodbanks that best cater to their specific needs.
+                        By utilizing our website, foodbank users can access the resources they need to help them and their families thrive.</ul>
                       <br />We are committed to serving both donators and foodbank users alike, and we encourage everyone to explore our website
                       and join us in our mission to create a world where no one goes hungry. Thank you for your support.
                     </Typography>

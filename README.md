@@ -4,7 +4,7 @@ This is the source code for my Foodbank User Portal which is a part of my FYP. <
 It is contained as a React project ready to be deployed as an [Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/overview).<br>
 Initial project files were set up with a [template ](staticwebdev/react-basic) which can be found on the documentation.
 
-## Other Important Deliverables
+## Important Deliverables
 
 Here are all deliverables that I have created as part of this project.<br>
 [Repo for Foodbank User Portal on Azure Static WebApps](https://github.com/zcabkle/fyp-foodbank-portal)<br>

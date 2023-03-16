@@ -9,7 +9,7 @@ import * as MdIcons from "react-icons/md";
 function Item(props) {
   return (
     <Paper style={{ zIndex: '-3', textAlign: 'center', alignContent: 'center' }}>
-      <img width="auto" height="500vh" src={props.item.src} alt="carousel item"/>
+      <img width="100%" height="auto" src={props.item.src} alt="carousel item"/>
       <Typography variant="body1" color="textSecondary">
         {props.item.description}
       </Typography>

@@ -27,9 +27,25 @@ To deploy this repo yourself follow these steps.
 9. When app creation is a success, you will see this notification <br> <img width="645" alt="image" src="https://user-images.githubusercontent.com/73954803/225748908-3f06c557-0dd1-4293-9ac2-5c8b100752a7.png">
 10. Access the production version here. This menu can be found when you enter the Azure extensions window. <img width="600" alt="image" src="https://user-images.githubusercontent.com/73954803/225749149-f10d31d2-53be-4657-a40b-e832944648b4.png">
 
-## Further Resources
+## Azure Portal
 
-Full Azure Static Web App documentation can be found here: https://learn.microsoft.com/en-us/azure/static-web-apps/
+The [Azure Portal](https://portal.azure.com/#home) is a way to customise and monitor your deployment.<br>
+
+### Configuring the Deployment
+1. After you have deployed on Azure you should be able to navigate to Static Web Apps page from the landing page by searching or clicking the icon.<br><img width="1440" alt="Screenshot 2023-03-16 at 21 02 24" src="https://user-images.githubusercontent.com/73954803/225752516-cd4ca6ae-1808-458a-9630-148ab3f33d87.png"><br>
+2. You will then land on this page which will give you some more options for customisation.<br>
+<img width="1439" alt="Screenshot 2023-03-16 at 20 57 37" src="https://user-images.githubusercontent.com/73954803/225752677-3493ac15-c8ab-4742-ae15-003334e62d74.png"><br>
+3. Changing any fields will affect your production deployment.
+
+## Useful Documentation & Resources
+
+To aid further development, here are some useful resources to get you started.
+
+[Full documentation on Azure Static Web Apps](https://learn.microsoft.com/en-us/azure/static-web-apps/)<br>
+[Microsoft Learn resources for Azure Static Web Apps](https://learn.microsoft.com/en-us/azure/static-web-apps/overview)<br>
+[Guide for the API](https://learn.microsoft.com/en-us/azure/static-web-apps/add-api?tabs=vanilla-javascript#update-the-frontend-app-to-call-the-api)<br>
+[Documentation for MUI](https://mui.com)<br>
+[Documentation for React](https://react.dev)<br>
 
 
 

@@ -1,4 +1,4 @@
-# Final Year Project: Foodbank User Portal Source Code
+# Final Year Project: Foodbank User Portal (JS Source Code)
 
 This is the source code for my Foodbank User Portal. It is contained as a React project ready to be deployed as an [Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/overview).
 

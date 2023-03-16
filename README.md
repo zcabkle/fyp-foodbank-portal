@@ -1,8 +1,16 @@
 # Final Year Project: Foodbank User Portal (JS Source Code)
 
-This is the source code for my Foodbank User Portal. It is contained as a React project ready to be deployed as an [Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/overview).
-
+This is the source code for my Foodbank User Portal which is a part of my FYP. <br>
+It is contained as a React project ready to be deployed as an [Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/overview).<br>
 Initial project files were set up with a [template ](staticwebdev/react-basic) which can be found on the documentation.
+
+## Other Important Deliverables
+
+Here are the other deliverables that I have created as part of this project.<br>
+[Video overview of the project](https://www.youtube.com)<br>
+[Repo for Foodbank Worker Portal on PowerApps](https://github.com/zcabkle/pa-foodbank-worker-app)<br>
+[Repo for Admin Portal on PowerApps]()<br>
+[TestStudio Configuration for Foodbank Worker Portal]()<br>
 
 ## This repo is currently being hosted. Access it at this link.
 https://gentle-beach-0e3070003.2.azurestaticapps.net
@@ -16,7 +24,7 @@ https://gentle-beach-0e3070003.2.azurestaticapps.net
 
 ## Deploying onto Azure
 
-To deploy this repo yourself follow these steps.
+To clone and deploy this repo yourself follow these steps.
 
 1. Clone this repo.
 2. Install the [Azure Static Web Apps extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps)
@@ -28,6 +36,8 @@ To deploy this repo yourself follow these steps.
 8. Enter these values when asked for them. <br> <img width="611" alt="image" src="https://user-images.githubusercontent.com/73954803/225748743-d1874edc-d64b-4d31-8934-626a7e934385.png">
 9. When app creation is a success, you will see this notification <br> <img width="645" alt="image" src="https://user-images.githubusercontent.com/73954803/225748908-3f06c557-0dd1-4293-9ac2-5c8b100752a7.png">
 10. Access the production version here. This menu can be found when you enter the Azure extensions window. <img width="600" alt="image" src="https://user-images.githubusercontent.com/73954803/225749149-f10d31d2-53be-4657-a40b-e832944648b4.png">
+
+Any further commits to the main branch will be deployed to production due to the GitHub Action. The config for this is found in the 
 
 ## Azure Portal
 

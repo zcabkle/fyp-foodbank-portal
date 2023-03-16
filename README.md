@@ -2,7 +2,7 @@
 
 This is the source code for my Foodbank User Portal. It is contained as a React project ready to be deployed as an [Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/overview).
 
-Initial project files were set up with a [template ](staticwebdev/react-basic) found on the documentation.
+Initial project files were set up with a [template ](staticwebdev/react-basic) which can be found on the documentation.
 
 ## This repo is currently being hosted. Access it at this link.
 https://gentle-beach-0e3070003.2.azurestaticapps.net

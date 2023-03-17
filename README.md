@@ -23,8 +23,8 @@ https://gentle-beach-0e3070003.2.azurestaticapps.net
 ## Running Locally
 
 1. Install required dependencies and clone this repo. 
-2. Build with `npm run build`  
-3. Run with `swa start build --api-location api`  
+2. Build with the command line at the root directory `npm run build`  
+3. Run from the root directory `swa start build --api-location api`  
 4. Open http://localhost:4280 on browser.
 
 ## Deploying onto Azure

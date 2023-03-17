@@ -46,7 +46,8 @@
   "eslintConfig": {
     "extends": "react-app",
     "rules": {
-      "react-in-jsx-scope": "off"
+      "react-in-jsx-scope": "off",
+      "no-unused-vars":"off"
     }
   },
   "browserslist": {

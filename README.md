@@ -42,7 +42,7 @@ To clone and deploy this repo yourself follow these steps.
 9. When app creation is a success, you will see this notification <br> <img width="645" alt="image" src="https://user-images.githubusercontent.com/73954803/225748908-3f06c557-0dd1-4293-9ac2-5c8b100752a7.png">
 10. Access the production version here. This menu can be found when you enter the Azure extensions window. <img width="600" alt="image" src="https://user-images.githubusercontent.com/73954803/225749149-f10d31d2-53be-4657-a40b-e832944648b4.png">
 
-Any further commits to the main branch will be deployed to production due to the GitHub Action. The config for this is found in the **NEED TO WRITE FILENAME HERE**
+Any further commits to the main branch will be deployed to production due to the GitHub Action. The config for this is found in the azure-static-web-apps-gentle-beach-0e3070003.yml file.
 
 ## Azure Portal
 

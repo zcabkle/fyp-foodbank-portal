@@ -63,9 +63,3 @@ To aid further development, here are some useful resources to get you started.
 [Guide for the API](https://learn.microsoft.com/en-us/azure/static-web-apps/add-api?tabs=vanilla-javascript#update-the-frontend-app-to-call-the-api)<br>
 [Documentation for MUI](https://mui.com)<br>
 [Documentation for React](https://react.dev)<br>
-
-
-
-
-
-

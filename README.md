@@ -22,7 +22,7 @@ https://gentle-beach-0e3070003.2.azurestaticapps.net
 
 ## Running Locally
 
-1. Install required dependencies. 
+1. Install required dependencies and clone this repo. 
 2. Build with `npm run build`  
 3. Run with `swa start build --api-location api`  
 4. Open http://localhost:4280 on browser.
@@ -32,9 +32,9 @@ https://gentle-beach-0e3070003.2.azurestaticapps.net
 To clone and deploy this repo yourself follow these steps.
 
 1. Clone this repo.
-2. Install the [Azure Static Web Apps extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps)
+2. Install the [Azure Static Web Apps Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps)
 3. Inside Visual Studio Code, select the Azure logo in the Activity Bar to open the Azure extensions window. <br> <img width="59" alt="image" src="https://user-images.githubusercontent.com/73954803/225747468-6ab62c25-4c73-4c65-93e2-8373947a720f.png">
-4. Select F1 to open the Visual Studio Code command palette.
+4. Press F1 to open the Visual Studio Code command palette.
 5. Enter Create static web app in the command box.
 6. Select Azure Static Web Apps: Create static web app... and select Enter.
 7. Enter these values when asked for them. <br> <img width="608" alt="image" src="https://user-images.githubusercontent.com/73954803/225748604-84cfd2f4-0dba-4e33-8213-c31da8b9f8e8.png">

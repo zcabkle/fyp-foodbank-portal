@@ -129,6 +129,7 @@ const FoodbankParcelsListTable = (props) => {
                         <Typography
                           color="textSecondary"
                           variant="body2"
+                          component='span'
                         >
                           {parcel.cr967_description ? <div style={{ whiteSpace: 'pre-line' }}>{parcel.cr967_description}</div> : "No description given."}
                         </Typography>

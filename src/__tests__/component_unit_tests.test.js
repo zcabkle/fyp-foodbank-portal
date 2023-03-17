@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom'
 import Navbar from "../components/Navbar/Navbar"
 import { MultiSelect } from '../components/multi-select';
@@ -21,6 +21,7 @@ import { mockItems } from '../test_utility/mockItems';
 import { mockTags } from '../test_utility/mockTags';
 import { mockParcels } from '../test_utility/mockParcels';
 import userEvent from '@testing-library/user-event';
+import ErrorComponent from '../components/Error/ErrorComponent';
 
 // establish API mocking before all tests
 beforeAll(() => server.listen())
@@ -66,6 +67,15 @@ test('renders the severity pill', async () => {
 
 test('renders the scrollbar', async () => {
   const result = render(< Scrollbar />);
+});
+
+test('renders the error component', async () => {
+  const result = render(< ErrorComponent />);
+
+  await waitFor(async () => {
+    expect((await screen.findAllByRole('heading'))[0]).toBeInTheDocument()
+    expect((await screen.findAllByRole('heading'))[0]).toHaveTextContent("404 Error. Page not found. Error occured.")
+  });
 });
 
 // Replace with full app rendering?

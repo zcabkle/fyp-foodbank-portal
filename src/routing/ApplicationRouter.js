@@ -3,7 +3,6 @@ import LandingPage from "../pages/landing-page/landing-page";
 import ItemsPage from "../pages/items-page/items-page.js";
 import FoodbanksPage from "../pages/foodbanks-page/foodbanks-page";
 import FoodbankItemsPage from "../pages/foodbank-items-page/foodbank-items-page";
-import AboutPage from "../pages/about-page/about-page";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import FoodbankParcelsPage from "../pages/foodbank-parcels-page/foodbank-parcels-page";
 import Navbar from "../components/Navbar/Navbar";
@@ -21,7 +20,6 @@ function ApplicationRouter() {
                     <Route path='items' element={< ItemsPage />} />
                     <Route path="items/:id" element={<FoodbankItemsPage />} />
                     <Route path="parcels/:id" element={<FoodbankParcelsPage />} />
-                    <Route path='about' element={< AboutPage />} />
                     <Route path="*" element={<ErrorPage/>}/>
                 </Routes>
                 <Footer/>

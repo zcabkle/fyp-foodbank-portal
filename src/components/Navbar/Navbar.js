@@ -86,10 +86,6 @@ function Navbar() {
               <MenuItem key={'items'} onClick={handleCloseNavMenu}>
                 <NavLink to="/items" className={(navData) => (navData.isActive ? "active-menu" : 'menu-item')}>Items</NavLink>
               </MenuItem>
-
-              <MenuItem key={'help'} onClick={handleCloseNavMenu}>
-                <NavLink to="/help" className={(navData) => (navData.isActive ? "active-menu" : 'menu-item')}>Help</NavLink>
-              </MenuItem>
             </Menu>
           </Box>
           <GroupsIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, fontSize: '32px' }} />
@@ -132,14 +128,6 @@ function Navbar() {
                 <Box sx={{ my: 2, pr: 2, color: 'white', display: 'block' }}>
                 Items
                 </Box>
-            </NavLink>
-
-            <NavLink to="/about" className={(navData) => (navData.isActive ? "active-link" : 'link-item')}>
-              <Box
-                sx={{ my: 2, pr: 2, color: 'white', display: 'block' }}
-              >
-                About
-              </Box>
             </NavLink>
           </Box>
         </Toolbar>

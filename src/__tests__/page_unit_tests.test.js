@@ -6,6 +6,7 @@ import FoodbanksPage from '../pages/foodbanks-page/foodbanks-page';
 import ItemsPage from '../pages/items-page/items-page';
 import FoodbankParcelsPage from '../pages/foodbank-parcels-page/foodbank-parcels-page';
 import FoodbankItemsPage from '../pages/foodbank-items-page/foodbank-items-page';
+import ErrorPage from '../pages/error-page/error-page';
 import { server } from "../test_utility/mockServer"
 
 // establish API mocking before all tests
@@ -69,6 +70,16 @@ test('renders the foodbank parcels page with the correct foodbank name', async (
   await waitFor(async () => {
     expect((await screen.findAllByRole('heading'))[0]).toBeInTheDocument()
     expect((await screen.findAllByRole('heading'))[0]).toHaveTextContent("Parcels at St Pancreas New Church")
+  });
+
+});
+
+test('renders the error page', async () => {
+  const result = render(<ErrorPage />);
+
+  await waitFor(async () => {
+    expect((await screen.findAllByRole('heading'))[0]).toBeInTheDocument()
+    expect((await screen.findAllByRole('heading'))[0]).toHaveTextContent("404 Error. Page not found. Error occured.")
   });
 
 });

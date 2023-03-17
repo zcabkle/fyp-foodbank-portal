@@ -40,6 +40,12 @@ export const server = setupServer(
     )
   }),
 
+  rest.get('/api/error', (req, res, ctx) => {
+    return res(
+      ctx.status(404)
+    )
+  }),
+
   rest.get('/api/parcelsid/512cf0c1-e290-ed11-aad1-000d3adf443b', (req, res, ctx) => {
     return res(
       ctx.json({

@@ -1,6 +1,6 @@
 # Final Year Project: Foodbank User Portal (JS Source Code)
 
-This is the source code for my Foodbank User Portal which is a part of my FYP. <br>
+This is the source code for my Foodbank User Portal which is one part of my FYP. All deliverables can be found in the "Important Deliverables" section. <br>
 It is contained as a React project ready to be deployed as an [Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/overview).<br>
 Initial project files were set up with a [template ](staticwebdev/react-basic) which can be found on the documentation.
 
@@ -8,13 +8,14 @@ Initial project files were set up with a [template ](staticwebdev/react-basic) w
 
 Here are all deliverables that I have created as part of this project.<br>
 [Repo for Foodbank User Portal on Azure Static WebApps](https://github.com/zcabkle/fyp-foodbank-portal)<br>
+
 [Repo for Foodbank Worker Portal on PowerApps](https://github.com/zcabkle/pa-foodbank-worker-app)<br>
-[Repo for Admin Portal on PowerApps]()<br>
+
+[Exported Solution inc. Foodbank Worker Portal on PowerApps and Admin Portal on PowerApps](https://github.com/zcabkle/pa-foodbank-worker-app/files/10996387/FoodbankSolution_1_0_0_10_managed.zip)<br>
 [TestStudio Configuration for Foodbank Worker Portal]()<br>
 
 [Video Overview of the Project](https://www.youtube.com)<br>
 [Blog Submission]()<br>
-
 
 ## This repo is currently being hosted. Access it at this link.
 https://gentle-beach-0e3070003.2.azurestaticapps.net

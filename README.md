@@ -1,6 +1,6 @@
 # Final Year Project: Foodbank User Portal (JS Source Code)
 
-This is the source code for my Foodbank User Portal which is one part of my FYP. **For a full overview of the project I recommend reading this [Blog Submission]() and watching this [Video Overview of the Project](https://www.youtube.com)**<br><br>
+This is the source code for my Foodbank User Portal which is one part of my FYP. **For a full overview of the project I recommend reading this [Blog Submission]() and watching this [Video Overview of the Project](https://www.youtube.com)**.<br><br>
 All deliverables can be found in the "Important Deliverables" section. <br>
 This repository is contained as a React project ready to be deployed as an [Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/overview).<br>
 Initial project files were set up with a [template ](staticwebdev/react-basic) which can be found on the documentation.
@@ -20,8 +20,30 @@ https://gentle-beach-0e3070003.2.azurestaticapps.net
 
 ## Running Locally
 
+### Prerequisite Steps
+As you should have seen in the blog and video overview, **this repository requires a working PowerApps solution to be running**, as this solution accesses the PowerApps Dataverse with its API.
+
+If you want to run locally. Please visit [this repo](https://github.com/zcabkle/pa-foodbank-worker-app) and follow the steps to deploy that project.
+
+After this has been done you need to get the corresponding variables in order to configure your build.
+
+1. Go to the PowerApps environment that you put your solution into. Go to to the top right settings icon and click 'Developer Resources'. **Record the 'Web API endpoint' value. This will be the DATABASE_CONNECTION_STRING in our build.**<br>
+2. Your DATABASE_CONNECTION_STRING will be of the form https://orgXXXXXXXX.api.crm4.dynamics.com/api/data/v9.2/, **create a string of the form 
+https://orgXXXXXXXX.api.crm4.dynamics.com/.default, record this value it will be the SCOPE in our build**.
+![Screenshot 2023-03-22 at 13 52 54](https://user-images.githubusercontent.com/73954803/226926700-ac228264-4afb-4c15-982e-7c8a4f4e62b7.png)
+3. Go to the [Azure Portal](), navigate to 'Azure Active Directory' and then 'App Registrations'.<br>
+4. Add a new app registration, give the registration a meaningful name and select 'Accounts in any organizational directory', navigate to the next page.<br>
+5. Add a new secret by clicking 'Add a certificate or secret'. Add a new secret with a meaningful name and with a chosen duration. **Record the value of this secret, this will be the CLIENT_SECRET in our build.**<br>
+![image](https://user-images.githubusercontent.com/73954803/226931600-555c9aa3-5057-4065-9ec3-d51121a2ae3e.png)
+6. **Record the Application (client) Id, this will be the CLIENT_ID of our build**
+![Screenshot 2023-03-22 at 14 16 25](https://user-images.githubusercontent.com/73954803/226932775-7d86f3e1-b487-4518-8c5b-a8070137f43f.png)
+7. Append the tenant ID to https://login.microsoftonline.com/. **Record this string, this will be the AUTHORITY in our build**.
+![Screenshot 2023-03-22 at 14 19 57](https://user-images.githubusercontent.com/73954803/226933633-11994e5c-6023-452b-8496-032461effa2d.png)
+
+### Steps to Run Locally
 1. Install required dependencies and clone this repo. 
-2. Build with the command line at the root directory `npm run build`  
+2. Build with the 
+command line at the root directory `npm run build`  
 3. Run from the root directory `swa start build --api-location api`  
 4. Open http://localhost:4280 on browser.
 

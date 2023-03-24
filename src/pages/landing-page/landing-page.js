@@ -9,7 +9,7 @@ import * as MdIcons from "react-icons/md";
 function Item(props) {
   return (
     <Paper style={{ zIndex: '-3', textAlign: 'center', alignContent: 'center' }}>
-      <img width="100%" height="auto" src={props.item.src} alt="carousel item"/>
+      <img width="100%" height="auto" src={props.item.src} alt="carousel item" />
       <Typography variant="body1" color="textSecondary">
         {props.item.description}
       </Typography>
@@ -27,6 +27,7 @@ const LandingPage = () => {
   const [loadedSS, setLoadedSS] = useState(false)
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [firstImgLoaded, setFirstImgLoaded] = useState(false);
 
   if (!sessionStorage.getItem("userType")) {
     window.sessionStorage.setItem("userType", "")
@@ -87,20 +88,20 @@ const LandingPage = () => {
           }}
         >
           {
-          userType === '' && <Typography variant='body1' color="textSecondary"> <br></br> </Typography>
+            userType === '' && <Typography variant='body1' color="textSecondary"> <br></br> </Typography>
           }
 
           {
-            userType === 'user' && <Typography variant='body1' color="textSecondary"> <br /> 
-            <li>Use the <Link href='/foodbanks'>foodbank tab</Link> to find foodbanks and browse their items or parcels from the dropdowns. </li>
-            <li> Alternatively, view the items available across all of our branches and filter them on the <Link href='/items'>items tab</Link>. </li>
-            <li> Use the contact details provided to book a visit to the foodbank that can best support your needs at the moment. </li> <br/><br/></Typography>
+            userType === 'user' && <Typography variant='body1' color="textSecondary"> <br />
+              <li>Use the <Link href='/foodbanks'>foodbank tab</Link> to find foodbanks and browse their items or parcels from the dropdowns. </li>
+              <li> Alternatively, view the items available across all of our branches and filter them on the <Link href='/items'>items tab</Link>. </li>
+              <li> Use the contact details provided to book a visit to the foodbank that can best support your needs at the moment. </li> <br /><br /></Typography>
           }
           {
-            userType === 'donator' && <Typography variant='body1' color="textSecondary"> <br /> 
-            <li>Use the <Link href='/foodbanks'>foodbank tab</Link> to find foodbanks and browse which items are in need at those foodbanks. </li>
-            <li> Alternatively, view the items available across all of our branches on the <Link href='/items'>items tab</Link> to see which foodbanks are in need of donations. </li>
-            <li> Use the contact details provided to book a visit to the foodbank that you would like to help out. </li> <br/><br/></Typography>
+            userType === 'donator' && <Typography variant='body1' color="textSecondary"> <br />
+              <li>Use the <Link href='/foodbanks'>foodbank tab</Link> to find foodbanks and browse which items are in need at those foodbanks. </li>
+              <li> Alternatively, view the items available across all of our branches on the <Link href='/items'>items tab</Link> to see which foodbanks are in need of donations. </li>
+              <li> Use the contact details provided to book a visit to the foodbank that you would like to help out. </li> <br /><br /></Typography>
           }
         </Box>
       </Paper>
@@ -190,19 +191,26 @@ const LandingPage = () => {
             </Grid>
             <br />
 
-            <Carousel
-              NextIcon={<AiIcons.AiFillCaretRight />}
-              PrevIcon={<AiIcons.AiFillCaretLeft />}
-              autoPlay={true}
-              interval={5000}
-              animation={"slide"}
-              navButtonsAlwaysVisible={true}
-              style={{ height: "100%", width: '100%', zIndex: '-3' }}
-            >
-              {
-                items.map((item, i) => <Item key={i} item={item} />)
-              }
-            </Carousel>
+            <img
+              src={items[0].src}
+              onLoad={() => setFirstImgLoaded(true)}
+              style={{ display: "none" }}
+            />
+            {firstImgLoaded && (
+              <Carousel
+                NextIcon={<AiIcons.AiFillCaretRight />}
+                PrevIcon={<AiIcons.AiFillCaretLeft />}
+                autoPlay={false}
+                interval={5000}
+                animation={"slide"}
+                navButtonsAlwaysVisible={true}
+                changeOnFirstRender={true}
+                style={{ height: "100%", width: '100%', zIndex: '-3' }}
+              >
+                {
+                  items.map((item, i) => <Item key={i} item={item} />)
+                }
+              </Carousel>)}
             <br></br>
             <ChoosePersona />
             <br></br>
@@ -216,7 +224,7 @@ const LandingPage = () => {
                 md={4}
                 xs={12}
               >
-                <Card  style={{ height: '100%' }}>
+                <Card style={{ height: '100%' }}>
                   <CardContent >
                     <Box
                       sx={{
@@ -252,7 +260,7 @@ const LandingPage = () => {
                       size="small"
                       href="/foodbanks"
                     >
-                        Browse Foodbanks
+                      Browse Foodbanks
 
                     </Button>
                   </CardActions>
@@ -263,7 +271,7 @@ const LandingPage = () => {
                 md={4}
                 xs={12}
               >
-                <Card  style={{ height: '100%' }}>
+                <Card style={{ height: '100%' }}>
                   <CardContent>
                     <Box
                       sx={{
@@ -300,7 +308,7 @@ const LandingPage = () => {
                       size="small"
                       href="/foodbanks"
                     >
-                        Discover Foodbanks
+                      Discover Foodbanks
                     </Button>
                   </CardActions>
                 </Card>
@@ -311,7 +319,7 @@ const LandingPage = () => {
                 md={4}
                 xs={12}
               >
-                <Card  style={{ height: '100%' }}>
+                <Card style={{ height: '100%' }}>
                   <CardContent >
                     <Box
                       sx={{
@@ -349,7 +357,7 @@ const LandingPage = () => {
                       size="small"
                       href="/items"
                     >
-                        Browse Items
+                      Browse Items
                     </Button>
                   </CardActions>
                 </Card>
@@ -428,7 +436,7 @@ const LandingPage = () => {
                         </li>
                         <br></br>
                         <li>For foodbank users, our website offers the ability to browse stock before visiting a foodbank, enabling them to visit the foodbanks that best cater to their specific needs.
-                        By utilizing our website, foodbank users can access the resources they need to help them and their families thrive.
+                          By utilizing our website, foodbank users can access the resources they need to help them and their families thrive.
                         </li>
                       </ul>
                       <br />

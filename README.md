@@ -17,6 +17,9 @@ Here are all deliverables that I have created as part of this project.<br>
 
 [TestStudio Configuration for Foodbank Worker Portal]()<br>
 
+[Video Overview of the Project](https://youtu.be/5YJZpnZifrY)<br>
+[Blog Submission]()<br>
+
 ## This repo is currently being hosted. Access it at this link.
 https://gentle-beach-0e3070003.2.azurestaticapps.net
 

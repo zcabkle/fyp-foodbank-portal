@@ -200,7 +200,7 @@ const LandingPage = () => {
               <Carousel
                 NextIcon={<AiIcons.AiFillCaretRight />}
                 PrevIcon={<AiIcons.AiFillCaretLeft />}
-                autoPlay={false}
+                autoPlay={true}
                 interval={5000}
                 animation={"slide"}
                 navButtonsAlwaysVisible={true}

@@ -1,6 +1,6 @@
 # Final Year Project: Foodbank User Portal (JS Source Code)
 
-This is the source code for my Foodbank User Portal which is one part of my FYP. **For a full overview of the project I recommend reading this [Blog Submission]() and watching this [Video Overview of the Project](https://youtu.be/5YJZpnZifrY)**.<br><br>
+This is the source code for my Foodbank User Portal which is one part of my FYP. **For a full overview of the project I recommend reading this [Blog Submission](https://techcommunity.microsoft.com/t5/educator-developer-blog/my-experience-using-power-platform-for-fusion-development-in-a/ba-p/3796960) and watching this [Video Overview of the Project](https://youtu.be/5YJZpnZifrY)**.<br><br>
 All deliverables can be found in the "Important Deliverables" section. <br>
 This repository is contained as a React project ready to be deployed as an [Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/overview).<br>
 Initial project files were set up with a [template ](staticwebdev/react-basic) which can be found on the documentation.

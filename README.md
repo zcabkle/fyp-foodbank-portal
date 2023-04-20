@@ -18,7 +18,7 @@ Here are all deliverables that I have created as part of this project.<br>
 [TestStudio Configuration for Foodbank Worker Portal]()<br>
 
 [Video Overview of the Project](https://youtu.be/5YJZpnZifrY)<br>
-[Blog Submission]()<br>
+[Blog Submission](https://techcommunity.microsoft.com/t5/educator-developer-blog/my-experience-using-power-platform-for-fusion-development-in-a/ba-p/3796960)<br>
 
 ## This repo is currently being hosted. Access it at this link.
 https://gentle-beach-0e3070003.2.azurestaticapps.net

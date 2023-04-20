@@ -337,3 +337,5 @@ const FoodbankItemsListTable = (props) => {
 };
 
 export default FoodbankItemsListTable;
+
+// Inspiration taken from https://mui.com/store/previews/devias-kit-pro/

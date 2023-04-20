@@ -156,3 +156,5 @@ const FoodbankParcelsListTable = (props) => {
 };
 
 export default FoodbankParcelsListTable;
+
+// Inspiration taken from https://mui.com/store/previews/devias-kit-pro/

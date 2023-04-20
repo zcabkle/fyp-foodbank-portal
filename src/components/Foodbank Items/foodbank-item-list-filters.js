@@ -270,3 +270,5 @@ export const ListFilters = (props) => {
 ListFilters.propTypes = {
   onChange: PropTypes.func
 };
+
+// Inspiration taken from https://mui.com/store/previews/devias-kit-pro/

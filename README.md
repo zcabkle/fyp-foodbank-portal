@@ -1,4 +1,4 @@
-# Final Year Project: Foodbank User Portal (JS Source Code)
+# Final Year Project: Foodbank User & Donator Portal (JS Source Code)
 
 This is the source code for my Foodbank User Portal which is one part of my FYP. **For a full overview of the project I recommend reading this [Blog Submission](https://techcommunity.microsoft.com/t5/educator-developer-blog/my-experience-using-power-platform-for-fusion-development-in-a/ba-p/3796960) and watching this [Video Overview of the Project](https://youtu.be/5YJZpnZifrY)**.<br><br>
 All deliverables can be found in the "Important Deliverables" section. <br>

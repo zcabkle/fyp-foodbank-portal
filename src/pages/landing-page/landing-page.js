@@ -191,7 +191,6 @@ const LandingPage = () => {
             </Grid>
             <br />
 
-           //Carousel bug fix found here: https://github.com/Learus/react-material-ui-carousel/issues/189
             <img
               src={items[0].src}
               onLoad={() => setFirstImgLoaded(true)}
@@ -459,3 +458,4 @@ const LandingPage = () => {
 export default LandingPage;
 
 // MUI carousel component was used: https://www.npmjs.com/package/react-material-ui-carousel
+//Carousel bug fix found here: https://github.com/Learus/react-material-ui-carousel/issues/189
